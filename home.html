@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Articole</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            background-color: #5e0f0d;
+            color: #b79323;
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        /* Bara de meniu */
+        .menu {
+            border-top: 2px solid white; /* Linie albă de separare */
+            background-color: #5e0f0d; /* Fundal mai închis pentru meniu */
+            padding: 0.5rem 0;
+            text-align: center;
+        }
+
+        .menu a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1rem;
+        }
+
+        .menu a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            padding: 2rem;
+        }
+
+        .title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            margin-left: 0; /* Titlul chiar la marginea stângă */
+        }
+
+        .articles {
+            margin-left: 0.5rem; /* Articolele mai la dreapta decât titlul */
+        }
+
+        .article {
+            font-size: 1.2rem;
+            color: #333;
+            text-align: left;
+            padding: 0.5rem 0;
+        }
+
+        .separator {
+            height: 1px;
+            width: 100%;
+            background-color: #333;
+            margin: 0.5rem 0;
+        }
+
+        /* Media Query pentru telefoane mici și pentru verticale */
+        @media (max-width: 768px) {
+            .title {
+                margin-left: 0; /* Titlul foarte aproape pe ecrane mici (verticale) */
+            }
+
+            .articles {
+                margin-left: 0.5rem; /* Articolele și mai aproape pe telefoane mici */
+            }
+        }
+
+        /* Media Query pentru ecrane foarte mici (sub 480px) */
+        @media (max-width: 480px) {
+            .title {
+                margin-left: 0; /* Titlul foarte aproape pe telefoane foarte mici */
+            }
+
+            .articles {
+                margin-left: 0.5rem; /* Articolele și mai aproape pe telefoane foarte mici */
+            }
+        }
+        a {
+    color: black; /* Setează culoarea textului linkului la negru */
+    text-decoration: none; /* Elimină sublinierea */
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>bitsec.github.io</h1>
+    </header>
+
+        <div class="menu">
+        <a href="home.html">Home</a>
+        <a href="#about">About</a>
+        <a href="support.html">Support</a>
+    </div>
+
+    <main>
+        <div class="title">Getting ready</div>
+        <div class="articles">
+            <div class="article"><a href="installing-linux-terminal.html">Installing Linux terminal on Windows and Android</a></div>
+            <div class="separator"></div>
+            <div class="article"><a href="linux-commands.html">Linux commands</a></div>
+            <div class="separator"></div>
+            <div class="article"><a href="legal-aspects.html">Legal aspects</a></div>
+            <div class="separator"></div>
+        </div> <br><br>
+
+        <div class="title">Website</div>
+        <div class="articles">
+            <div class="article"><a href="sql-injection-in-login-fields.html">SQL Injection (SQLi) - introduction and SQLi in login fields</a></div>
+            <div class="separator"></div>
+            <div class="article" style="color:gray;">Coming soon</div>
+            <div class="separator"></div>
+        </div><br><br>
+
+        <div class="title">Network</div>
+        <div class="articles">
+            <div class="article" style="color:gray;">Coming soon</div>
+            <div class="separator"></div>
+        </div> <br><br>
+    </main>
+</body>
+</html>
