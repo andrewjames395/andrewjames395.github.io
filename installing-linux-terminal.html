@@ -3,35 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
+    <title>Home</title>
     <style>
         body {
-            font-family: Verdana;
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: white; /* Light background for contrast */
+            background-color: #f9f9f9;
         }
+
         header {
             background-color: #5e0f0d;
             color: #b79323;
-            padding: 1rem;
             text-align: center;
+            justify-content: center;
+            display: flex;
+            padding: 1rem 0;
+            width: 100%;
+            height: 100px;
+            align-items: center;
         }
+        
+
+        
         .menu {
-            border-top: 2px solid white; /* White line separating header and menu */
-            background-color: #5e0f0d;; /* Darker background for the menu */
+            border-top: 2px solid white;
+            background-color: #5e0f0d;
             padding: 0.5rem 0;
             text-align: center;
         }
+
         .menu a {
             color: white;
             text-decoration: none;
             margin: 0 1rem;
         }
+
         .menu a:hover {
             text-decoration: underline;
         }
-        main {
+
+       
+main {
             padding: 1rem;
         }
         .text-content {
@@ -62,18 +75,21 @@
             color: white; /* Text color for the footer */
             text-align: center; /* Center the text */
             padding: 1rem;
-            border-top: 2px solid white; /* Similar to menu to maintain visual consistency */
+            border-top: 2px solid white;
+
     </style>
 </head>
 <body>
     <header>
-        <h1>redteam.com</h1>
+        <h2><b>andrewjames395.github.io</b></h2>
     </header>
-    <div class="menu">
-        <a href="home">Home</a>
+
+        <div class="menu">
+        <a href="https://andrewjames395.github.io/home.html">Home</a>
         <a href="#about">About</a>
-        <a href="support">Support</a>
+        <a href="https://andrewjames395.github.io/support.html">Support</a>
     </div>
+
     <main>
         <h2>Installing Linux terminal on Windows and Android</h2>
         <div class="image-container">
@@ -96,13 +112,10 @@ After restarting, go to the Microsoft Store and install the Kali Linux or Ubuntu
 <b>Final configuration</b>
             <p>After you have installed the Linux terminal, both on the PC and on Android it is necessary to update the system, to bring all its functionalities up to date. All you have to do is to enter <span class="boxed-text">sudo apt update && sudo apt upgrade</span> in the terminal. On the PC, it will ask you to enter the password, while on Android it will run directly. This command, which consists of two commands (sudo apt update and sudo apt upgrade), will update your system.
 
-After completing these steps, you will be able to use the Linux terminal on Windows. </p>
+After completing these steps, you will be able to use the Linux terminal on Windows and Android. </p>
 
-
-        </div>
     </main>
-    <footer>
-    This is a footer
-    </footer>
+    
+    
 </body>
 </html>
