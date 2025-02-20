@@ -72,6 +72,14 @@ main {
     margin-top: 0;
     line-height: 1;
         }
+        .command {
+    color: #8b0000; /* Roșu închis */
+    font-weight: bold;
+    font-family: monospace; /* Aspect de terminal */
+    background-color: #f0e6e6; /* Un fundal discret */
+    padding: 2px 5px;
+    border-radius: 3px;
+}
         footer {
             background-color: #333;
             color: white; 
@@ -108,9 +116,9 @@ main {
 
 <b>2. pwd</b> <br>
 
-<p>The <span class="boxed-text">pwd</span> command (print working directory) displays the path of the folder you are currently in.</p>
+<p>The <span class="command">pwd</span> command (print working directory) displays the path of the folder you are currently in.</p>
 
-<p>Just like on Windows, Linux operates on a system of folders and subfolders. Taking Windows as an initial example, the home directory (the one you access when you open your PC) is Desktop, which is essentially a folder. Running the "pwd" command in Windows CMD in the Desktop folder would produce an output like: C:\Users\John\Desktop .Similarly, on Linux, running "pwd" in the home directory would return something like: /home/john or /home/userland (for Userland on Android). </p>
+<p>Just like on Windows, Linux operates on a system of folders and subfolders. Taking Windows as an initial example, the home directory (the one you access when you open your PC) is Desktop, which is essentially a folder. Running the <span class="command">pwd</span> command in Windows CMD in the Desktop folder would produce an output like: C:\Users\John\Desktop .Similarly, on Linux, running "pwd" in the home directory would return something like: /home/john or /home/userland (for Userland on Android). </p>
 
 <p>If you have another folder inside your home directory, for example, notes, then running "pwd" while inside that folder will return: /home/john/notes . </p><br>
 
