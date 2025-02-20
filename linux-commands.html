@@ -51,14 +51,16 @@ main {
             margin-bottom: 1rem;
         }
         .image-container {
-            text-align: center;
-            margin: 1rem 0;
-        }
-        .image-container img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-            margin: 0 auto;
+    max-width: 100%; /* Nu permite ca imaginea să depășească containerul */
+    text-align: center; /* Centrează imaginea */
+}
+
+.image-container img {
+    max-width: 100%; /* Face ca imaginea să nu depășească containerul */
+    height: auto; /* Menține proporțiile */
+    display: block;
+    margin: 0 auto; /* O centrează în interiorul containerului */
+}
         }
         .boxed-text {
     display: inline-block;
@@ -93,7 +95,11 @@ main {
     <main>
      
 <h2>Linux commands</h2><br>
-<img src="https://www.allhandsontech.com/images/linux/linux-commands/linux-commands-06.webp" alt="Ubuntu commands"><br>
+
+<div class="image-container">
+    <img src="https://www.allhandsontech.com/images/linux/linux-commands/linux-commands-06.webp" alt="Ubuntu commands">
+</div>
+
 <p>The Linux terminal may seem complicated at first, especially for someone used to the graphical interface of Windows, which consists of icons. Although Linux OS also has a graphical interface similar to Windows (with icons too), in the process of ethical hacking we will focus more on the terminal. The Linux terminal is similar to PowerShell or CMD on Windows, and someone who has used these two applications before may find several similarities between them. So, to use Linux, you need to know certain commands. <p> <br>
 
 <b>1. whoami</b> <br>
