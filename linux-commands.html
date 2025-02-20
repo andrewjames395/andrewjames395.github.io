@@ -146,19 +146,19 @@ Warning: The rm command only works for deleting files, not folders!</p><br>
 
 <p>The rmdir (remove directory) command deletes an empty folder. For example, rmdir notes will delete the notes folder, but only if it is empty. To delete a folder that contains files, use rm -r folder_name.</p><br>
 
-<b>10. cp<b><br>
+<b>10. cp</b><br>
 
-<p>The cp command (copy) copies a file from one location to another. For example, if we have the file "todolist.txt" in the /home/john/notes folder and want to copy it to /home/john/important, we use the command cp location_from location_to. In our case:<br>
+<p>The cp command (copy) copies a file from one location to another. For example, if we have the file "todolist.txt" in the /home/john/notes folder and want to copy it to /home/john/important, we use the command cp location_from location_to. In our case:<br><br>
 
-cp /home/john/notes/todolist.txt /home/john/important<br>
+cp /home/john/notes/todolist.txt /home/john/important<br><br>
 
-This will create a copy of todolist.txt in the important folder while keeping the original file in the notes folder.<br>
+This will create a copy of todolist.txt in the important folder while keeping the original file in the notes folder.<br><br>
 
-IMPORTANT: When working with file paths, it’s important to know that if the file is in the directory you are currently in, you can simply use its name without specifying the full path (/home/user/...).<br>
+IMPORTANT: When working with file paths, it’s important to know that if the file is in the directory you are currently in, you can simply use its name without specifying the full path (/home/user/...).<br><br>
 
-Also, if the file is in a nearby directory, you can use .. (one directory back) to simplify the path.<br>
+Also, if the file is in a nearby directory, you can use .. (one directory back) to simplify the path.<br><br>
 
-For example, if we are in the "important" directory, our previous command could be written as:<br>
+For example, if we are in the "important" directory, our previous command could be written as:<br><br>
 
 cp todolist.txt ../important<br>
 
