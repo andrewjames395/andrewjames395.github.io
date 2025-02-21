@@ -81,22 +81,21 @@ main {
     border-radius: 3px;
 }
 
- .terminal {
-    width: 100%;  /* Lățimea terminalului pe ecran */
-    max-width: 1024px;  /* Maxima lățime pentru a nu depăși 1024px */
+ .terminal-container {
+    max-width: 100%;  /* Nu permite ca terminalul să depășească containerul */
+    text-align: center;  /* Centrează terminalul */
+}
+
+.terminal {
+    display: inline-block;  /* Permite centrul natural */
+    max-width: 100%;  /* Se adaptează la container */
     background-color: black;
     border: 2px solid white;
     border-radius: 10px;
     padding: 10px;
     overflow-x: auto;
     white-space: nowrap;
-    height: auto;
-    margin-left: auto;  /* Centrează terminalul */
-    margin-right: auto;  /* Centrează terminalul */
-    display: block;
-    margin: 0 auto;
 }
-
         .username {
             color: #66cc66; /* Verde închis pentru numele de utilizator */
         }
@@ -138,8 +137,12 @@ main {
 
 <p>As the name suggests ("who am I"), this command prints the username of the current user. For example, running the "whoami" command on Android Linux Userland app, it will print "userland", while on a PC, it will display your username (the one you set up when you configured the system). <br>
 
-<div class="terminal">
-        <span class="username">andrew@DESKTOP-VVG27SC:~$</span> <span class="commandt">whoami<br>andrew</span></div>
+<div class="terminal-container">
+    <div class="terminal">
+        <span class="username">andrew@DESKTOP-VVG27SC:~$</span> 
+        <span class="commandt">whoami<br>andrew</span>
+    </div>
+</div>
 
 
 
