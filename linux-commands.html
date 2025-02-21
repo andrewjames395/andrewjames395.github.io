@@ -157,7 +157,12 @@ There are different variations of this command, such as: "ls -a" (list all) – 
 
 <p>The "mkdir" command (make directory) will create a directory in the current location. So, for exemple, running "mkdir notes" will create a directory named notes in the folder you are in.</p><br>  <b>5. cd</b> <br>
 
-<p>The "cd" (change directory) command allows the user to navigate into a specific folder. Just like on Windows, where you double click a folder to open it, on Linux you use the cd command you access it. For exemple, to enter the folder "notes", you run "cd notes". Once inside the folder, you run "ls" to display its content (the content does not automatically appear when you enter a directory). <br><br> There are more versions of this command. The simple "cd" command (without specifying a folder name) will take you to the home directory (/home/username). Also, the "cd .." command will move you one folder back. For exemple, if you are in "/home/john/notes" folder and enter "cd ..", you will go to "/home/john". Entering again the same command, you will enter "/home" directory. </p><br>
+<p>The "cd" (change directory) command allows the user to navigate into a specific folder. Just like on Windows, where you double click a folder to open it, on Linux you use the cd command you access it. For exemple, to enter the folder "notes", you run "cd notes". Once inside the folder, you run "ls" to display its content (the content does not automatically appear when you enter a directory). <br><br> There are more versions of this command. The simple "cd" command (without specifying a folder name) will take you to the home directory (/home/username). Also, the "cd .." command will move you one folder back. For exemple, if you are in "/home/john/notes" folder and enter "cd ..", you will go to "/home/john". Entering again the same command, you will enter "/home" directory. <br><br>
+
+IMPORTANT: When you want to enter a folder that is inside you directory, you don't use "cd /notes" but "cd notes". You only  use "/" when specifying the full path from the root directory (/home/username/notes). You can also enter multiple folders at once: "cd notes/2024".
+
+
+</p><br>
 
 <b>6. cat</b><br>
 
@@ -166,39 +171,43 @@ There are different variations of this command, such as: "ls -a" (list all) – 
 
 <p>Nano is a text editing tool. While the "cat" command displays the content of a file in the terminal (without allowing editing), nano allows us to create and edit files.<br><br>
 
-First, we need to check if nano is installed by typing "nano" in the terminal. If it’s not installed, we can install it using <span class="boxed-text">sudo apt install nano</span>. Once installed, we can open nano (enter <span class="boxed-text">nano</span> in the terminal) to create a new file, enter text, and close it by pressing CTRL+X, then Y to save, and finally entering the file name and pressing ENTER.<br>  To edit an existing file, we type nano followed by the file name: "nano informations.txt". After making changes, we close with CTRL+X, confirm saving with Y, and press ENTER.</p><br>
+First, we need to check if nano is installed by typing "nano" in the terminal (in Linux we run a tool by entering its name in the terminal). If it is not installed, we can install it using "sudo apt install nano" command. Once installed, we can open nano (enter "nano" in the terminal) to create a new file, enter the text, and close it by pressing CTRL+X, then Y to save, and finally entering the file name and pressing ENTER.<br>  To edit an existing file, we type nano followed by the file name: "nano informations.txt". After making changes, we close with CTRL+X, confirm saving with Y, and press ENTER.</p><br>
 
 <b>8. rm</b><br>
 
-<p>The <span class="boxed-text">rm</span> command (remove) deletes a file. For example, the command "rm informations.txt" will delete the file informations.txt.<br><br>
+<p>The "rm" command (remove) deletes a file. For example, the command "rm informations.txt" will delete the file informations.txt.<br><br>
 
- Warning: The rm command only works for deleting files, not folders!</p><br>
+Warning: The rm command only works for deleting files, not folders!</p><br>
 
 <b>9. rmdir</b><br>
 
-<p>The rmdir (remove directory) command deletes an empty folder. For example, <span class="boxed-text">rmdir notes</span> will delete the notes folder, but only if it is empty. To delete a folder that contains files, use <span class="boxed-text">rm -r folder_name</span>.</p><br>  <b>10. cp</b><br>
+<p>The "rmdir" (remove directory) command deletes an empty folder. For example, "rmdir notes" will delete the notes folder, but only if it is empty. To delete a folder that contains files, use "rm -r folder_name".</p><br>  <b>10. cp</b><br>
 
-<p>The cp command (copy) copies a file from one location to another. For example, if we have the file "todolist.txt" in the /home/john/notes folder and want to copy it to /home/john/important, we use the command cp location_from location_to. In our case:<br><br>  cp /home/john/notes/todolist.txt /home/john/important<br><br>
+<p>The cp command (copy) copies a file from one location to another. For example, if we have the file "todolist.txt" in the /home/john/notes folder and want to copy it to /home/john/important, we use the command "cp location_from location_to". In our case:<br><br>  "cp /home/john/notes/todolist.txt /home/john/important"<br><br>
 
 This will create a copy of todolist.txt in the important folder while keeping the original file in the notes folder.<br><br>
 
-IMPORTANT: When working with file paths, it’s important to know that if the file is in the directory you are currently in, you can simply use its name without specifying the full path (/home/user/...).<br><br>
+IMPORTANT: When working with file paths, it’s important to know that if the file is in the directory you are currently in, you can simply use its name as location without specifying the full path (/home/user/...).<br><br>
 
 Also, if the file is in a nearby directory, you can use .. (one directory back) to simplify the path.<br><br>
 
-For example, if we are in the "important" directory, our previous command could be written as: cp todolist.txt ../important<br><br>
+For example, if we are in the "important" directory, our previous command could be written as: "cp todolist.txt ../important"<br><br>
 
-Also, we can change the name of the copied file: cp todolist.txt ../important/renamed.txt. This command you copy the file with a different name.</p><br>
+Also, we can change the name of the copied file: "cp todolist.txt ../important/renamed.txt". This command you copy the file with a different name.</p><br>
 
 <b>11. mv</b><br>
 
-<p>The mv command move the file from a place to another. The usage is similar to the cp command: mv location_from location_to. </p>  <b>12. ifconfig</b><br>
+<p>The mv command move the file from a place to another. The usage is similar to the cp command: "mv location_from location_to". </p>  <b>12. ifconfig</b><br>
 
-<p>The ifconfig command displays network information, including the IP address. It is the Linux equivalent of ipconfig on Windows. If the command doesn’t work, you may need to install net-tools using: sudo apt install net-tools.</p><br>  <b>13. wget</b><br>
+<p>The ifconfig command displays network information, including the IP address. It is the Linux equivalent of ipconfig on Windows. If the command doesn’t work, you may need to install net-tools using: "sudo apt install net-tools".</p><br> 
 
-<p>The wget command download a file from internet. Usage exemple: wget https://mywebsite.com/file.txt</p><br>  <b>14. sudo</b><br>
+<b>13. wget</b><br>
 
-<p>With sudo command (super user do) you run a command as root. It is not used alone, but in combination with other commands(for exemple sudo apt install hashcat will install hashcat tool)</p><br>  <b>Other commands</b><br>
+<p>The wget command download a file from internet. Usage exemple: "wget https://mywebsite.com/file.txt"</p><br>  <b>14. sudo</b><br>
+
+<p>With sudo command (super user do) you run a command as root. It is not used alone, but in combination with other commands(for exemple "sudo apt install hashcat" will install hashcat tool)
+
+</p><br>  <b>Other commands</b><br>
 
 <p>CTRL+C stops the running program. In Windows Subsystem for Linux (WSL), CTRL+C on a selected text will copy the text and right-click will paste it.  </main>
 
