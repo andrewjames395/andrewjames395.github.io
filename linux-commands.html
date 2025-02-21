@@ -82,19 +82,22 @@ main {
 }
 
  .terminal-container {
-    max-width: 100%;  /* Nu permite ca terminalul să depășească containerul */
-    text-align: center;  /* Centrează terminalul */
+    max-width: 100%;  
+    text-align: center;  /* Centrează containerul terminalului */
 }
 
 .terminal {
-    display: inline-block;  /* Permite centrul natural */
-    max-width: 100%;  /* Se adaptează la container */
+    width: 100%;  /* Ocupă întreaga lățime a containerului */
+    max-width: 1024px;  /* Asigură că nu devine prea lat */
     background-color: black;
     border: 2px solid white;
     border-radius: 10px;
     padding: 10px;
     overflow-x: auto;
     white-space: nowrap;
+    text-align: left;  /* Aliniază textul la stânga */
+    margin-left: auto;
+    margin-right: auto;
 }
         .username {
             color: #66cc66; /* Verde închis pentru numele de utilizator */
