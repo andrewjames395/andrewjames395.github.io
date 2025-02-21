@@ -1,215 +1,158 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f9f9f9;
-        }
+<!DOCTYPE html>  <html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Home</title>  
+    <style>  
+        body {  
+            font-family: Arial, sans-serif;  
+            margin: 0;  
+            padding: 0;  
+            background-color: #f9f9f9;  
+        }  header {  
+        background-color: #5e0f0d;  
+        color: #b79323;  
+        text-align: center;  
+        justify-content: center;  
+        display: flex;  
+        padding: 1rem 0;  
+        width: 100%;  
+        height: 100px;  
+        align-items: center;  
+    }  
+      
 
-        header {
-            background-color: #5e0f0d;
-            color: #b79323;
-            text-align: center;
-            justify-content: center;
-            display: flex;
-            padding: 1rem 0;
-            width: 100%;
-            height: 100px;
-            align-items: center;
-        }
-        
+      
+    .menu {  
+        border-top: 2px solid white;  
+        background-color: #5e0f0d;  
+        padding: 0.5rem 0;  
+        text-align: center;  
+    }  
 
-        
-        .menu {
-            border-top: 2px solid white;
-            background-color: #5e0f0d;
-            padding: 0.5rem 0;
-            text-align: center;
-        }
+    .menu a {  
+        color: white;  
+        text-decoration: none;  
+        margin: 0 1rem;  
+    }  
 
-        .menu a {
-            color: white;
-            text-decoration: none;
-            margin: 0 1rem;
-        }
+    .menu a:hover {  
+        text-decoration: underline;  
+    }
 
-        .menu a:hover {
-            text-decoration: underline;
-        }
-
-       
 main {
-            padding: 1rem;
-        }
-        .text-content {
-            margin-bottom: 1rem;
-        }
-        .image-container {
-    max-width: 100%; /* Nu permite ca imaginea să depășească containerul */
-    text-align: center; /* Centrează imaginea */
+padding: 1rem;
+}
+.text-content {
+margin-bottom: 1rem;
+}
+.image-container {
+max-width: 100%; /* Nu permite ca imaginea să depășească containerul /
+text-align: center; / Centrează imaginea */
 }
 
 .image-container img {
-    max-width: 100%; /* Face ca imaginea să nu depășească containerul */
-    height: auto; /* Menține proporțiile */
-    display: block;
-    margin: 0 auto; /* O centrează în interiorul containerului */
-}
-        
-        .boxed-text {
-    display: inline-block;
-    border: 1px solid black;
-    background-color: #d3d3d3;
-    border-radius: 5px;
-    padding: 3px 6px;
-    color: black;
-    margin-top: 0;
-    line-height: 1;
-        }
-        .command {
-    color: #8b0000; /* Roșu închis */
-    font-weight: bold;
-    font-family: arial; /* Aspect de terminal */
-    background-color: #f0e6e6; /* Un fundal discret */
-    padding: 2px 5px;
-    border-radius: 3px;
+max-width: 100%; /* Face ca imaginea să nu depășească containerul /
+height: auto; / Menține proporțiile /
+display: block;
+margin: 0 auto; / O centrează în interiorul containerului */
 }
 
- .terminal-container {
-    max-width: 100%;  
-    text-align: center;  /* Centrează containerul terminalului */
+.boxed-text {  
+display: inline-block;  
+border: 1px solid black;  
+background-color: #d3d3d3;  
+border-radius: 5px;  
+padding: 3px 6px;  
+color: black;  
+margin-top: 0;  
+line-height: 1;  
+    }  
+    .command {  
+color: #8b0000; /* Roșu închis */  
+font-weight: bold;  
+font-family: arial; /* Aspect de terminal */  
+background-color: #f0e6e6; /* Un fundal discret */  
+padding: 2px 5px;  
+border-radius: 3px;
+
 }
 
 .terminal {
-    width: 100%;  /* Ocupă întreaga lățime a containerului */
-    max-width: 1024px;  /* Asigură că nu devine prea lat */
-    background-color: black;
-    border: 2px solid white;
-    border-radius: 10px;
-    padding: 10px;
-    overflow-x: auto;
-    white-space: nowrap;
-    text-align: left;  /* Aliniază textul la stânga */
-    margin-left: auto;
-    margin-right: auto;
+width: 90%;  /* Lățimea terminalului /
+max-width: 600px;  / Maxima lățime /
+background-color: black;
+border: 2px solid white;
+border-radius: 10px;  / Margini rotunjite /
+padding: 10px;
+overflow-x: auto;  / Permite scroll pe orizontală /
+white-space: nowrap;  / Previne ruperea textului pe linii noi /
+height: auto;  / Înălțimea se ajustează automat la conținut */
 }
-        .username {
-            color: #66cc66; /* Verde închis pentru numele de utilizator */
-        }
 
-        .commandt {
-            color: white;
-        }
-        footer {
-            background-color: #333;
-            color: white; 
-            text-align: center;
-            padding: 1rem;
-            border-top: 2px solid white;
+.username {  
+        color: #00FF00; /* Verde închis pentru numele de utilizator */  
+    }  
+
+    .commandt {  
+        color: white;  
+    }  
+    footer {  
+        background-color: #333;  
+        color: white;   
+        text-align: center;  
+        padding: 1rem;  
+        border-top: 2px solid white;
+
 }
-    </style>
-</head>
-<body>
-    <header>
-        <h2><b>andrewjames395.github.io</b></h2>
-    </header>
+</style>
 
-        <div class="menu">
-        <a href="https://andrewjames395.github.io/home.html">Home</a>
-        <a href="#about">About</a>
-        <a href="https://andrewjames395.github.io/support.html">Support</a>
-    </div>
+</head>  
+<body>  
+    <header>  
+        <h2><b>andrewjames395.github.io</b></h2>  
+    </header>  <div class="menu">  
+    <a href="https://andrewjames395.github.io/home.html">Home</a>  
+    <a href="#about">About</a>  
+    <a href="https://andrewjames395.github.io/support.html">Support</a>  
+</div>  
 
-    <main>
-     
-<h2>Linux commands</h2>
+<main>
 
-<div class="image-container">
-    <img src="https://www.allhandsontech.com/images/linux/linux-commands/linux-commands-06.webp" alt="Ubuntu commands">
-</div><br>
+<h2>Linux commands</h2>  <div class="image-container">  
+    <img src="https://www.allhandsontech.com/images/linux/linux-commands/linux-commands-06.webp" alt="Ubuntu commands">  
+</div><br>  <p>The Linux terminal may seem complicated at first, especially for someone used to the graphical interface of Windows, which consists of icons. Although Linux OS also has a graphical interface similar to Windows (with icons too), in the process of ethical hacking we will focus more on the terminal. The Linux terminal is similar to PowerShell or CMD on Windows, and someone who has used these two applications before may find several similarities between them. So, to use Linux, you need to know certain commands. <br><br>  </div>
 
-<p>The Linux terminal may seem complicated at first, especially for someone used to the graphical interface of Windows, which consists of icons. Although Linux OS also has a graphical interface similar to Windows (with icons too), in the process of ethical hacking we will focus more on the terminal. The Linux terminal is similar to PowerShell or CMD on Windows, and someone who has used these two applications before may find several similarities between them. So, to use Linux, you need to know certain commands.  </p> <br>
+ <p> <br>  <b>1. whoami</b> <br>
 
-<b>1. whoami</b> <br>
+<p>As the name suggests ("who am I"), this command prints the username of the current user. For example, running the "whoami" command on Android Linux Userland app, it will print "userland", while on a PC, it will display your username (the one you set up when you configured the system). <br>  <div class="terminal">  
+        <span class="username">andrew@DESKTOP-VVG27SC:~$</span> <span class="commandt">whoami<br>andrew</span></div>  </p><br>  <b>2. pwd</b> <br>
 
-<p>As the name suggests ("who am I"), this command prints the username of the current user. For example, running the "whoami" command on Android Linux Userland app, it will print "userland", while on a PC, it will display your username (the one you set up when you configured the system). <br>
+<p>The "pwd" command (print working directory) displays the path of the folder you are currently in.</p>  <p>Just like on Windows, Linux operates on a system of folders and subfolders. Taking Windows as an initial example, the home directory (the one you access when you open your PC) is Desktop, which is essentially a folder. Running the "pwd" command in Windows CMD in the Desktop folder would produce an output like: "C:\Users\John\Desktop". Similarly on Linux, executing "pwd" in the home directory would return something like: "/home/john" or "/home/userland" (for Userland on Android). </p>  <p>If you have another folder inside your home directory, for example, "notes", then running "pwd" while inside that folder will return: "/home/john/notes". <br>  <div class="terminal">  
+        <span class="username">andrew@DESKTOP-VVG27SC:~$</span> <span class="commandt">pwd<br>  
+/home/andrew</span></div>  </p><br>  <b>3. ls</b> <br>
 
-<div class="terminal-container">
-    <div class="terminal">
-        <span class="username">andrew@DESKTOP-VVG27SC:~$</span> 
-        <span class="commandt">whoami<br>andrew</span>
-    </div>
-</div>
+<p>The <span class="boxed-text">ls</span> command (list) displays the contents of the current folder, showing the files in white and the subfolders in blue. </p>  <p>There are different variations of this command, such as: <span class="boxed-text">ls -a</span> (list all) – Shows all files, including hidden ones or <span class="boxed-text">ls -l</span> (long listing format) – Displays files along with their properties, such as creation date, permissions, size etc. </p><br>  <b>4. mkdir</b> <br>
 
+<p>The <span class="boxed-text">mkdir</span> command (make directory) will create a directory in the current location. So, for exemple, running <span class="boxed-text">mkdir notes</span> will create a directory named notes in the folder you are in.</p><br>  <b>5. cd</b> <br>
 
-
-
-</p><br>
-
-<b>2. pwd</b> <br>
-
-<p>The "pwd" command (print working directory) displays the path of the folder you are currently in.<br><br>
-
-Just like on Windows, Linux operates on a system of folders and subfolders. Taking Windows as an initial example, the home directory (the one you access when you open your PC) is Desktop, which is essentially a folder. Running the "pwd" command in Windows CMD in the Desktop folder would produce an output like: "C:\Users\John\Desktop". Similarly on Linux, executing "pwd" in the home directory would return something like: "/home/john" or "/home/userland" (for Userland on Android). <br><br>
-
-If you have another folder inside your home directory, for example, "notes", then running "pwd" while inside that folder will return: "/home/john/notes". <br>
-
-<div class="terminal">
-        <span class="username">andrew@DESKTOP-VVG27SC:~$</span> <span class="commandt">pwd<br>
-/home/andrew</span></div>
-
-
-</p><br>
-
-<b>3. ls</b> <br>
-
-<p>The <span class="boxed-text">ls</span> command (list) displays the contents of the current folder, showing the files in white and the subfolders in blue. </p>
-
-<p>There are different variations of this command, such as: <span class="boxed-text">ls -a</span> (list all) – Shows all files, including hidden ones or <span class="boxed-text">ls -l</span> (long listing format) – Displays files along with their properties, such as creation date, permissions, size etc. </p><br>
-
-<b>4. mkdir</b> <br>
-
-<p>The <span class="boxed-text">mkdir</span> command (make directory) will create a directory in the current location. So, for exemple, running <span class="boxed-text">mkdir notes</span> will create a directory named notes in the folder you are in.</p><br>
-
-<b>5. cd</b> <br>
-
-<p>The <span class="boxed-text">cd</span> (change directory) command allows the user to navigate into a specific folder. Just like on Windows, where you double click a folder to open it, on Linux you use the cd command you access it. For exemple, to enter the folder "notes", you run <span class="boxed-text">cd notes</span>. Once inside the folder, you run <span class="boxed-text">ls</span> to display its content (the content does not automatically appear when you enter a directory). <br>
-
-There are more versions of this command. The simple <span class="boxed-text">cd</span> command (without specifying a folder name) will take you to the home directory (/home/username). Also, the <span class="boxed-text">cd ..</span> command will move you one folder back. For exemple, if you are in /home/john/notes folder and enter <span class="boxed-text">cd ..</span>, you will go to /home/john. Entering again the same command, you will enter /home directory. </p><br>
+<p>The <span class="boxed-text">cd</span> (change directory) command allows the user to navigate into a specific folder. Just like on Windows, where you double click a folder to open it, on Linux you use the cd command you access it. For exemple, to enter the folder "notes", you run <span class="boxed-text">cd notes</span>. Once inside the folder, you run <span class="boxed-text">ls</span> to display its content (the content does not automatically appear when you enter a directory). <br>  There are more versions of this command. The simple <span class="boxed-text">cd</span> command (without specifying a folder name) will take you to the home directory (/home/username). Also, the <span class="boxed-text">cd ..</span> command will move you one folder back. For exemple, if you are in /home/john/notes folder and enter <span class="boxed-text">cd ..</span>, you will go to /home/john. Entering again the same command, you will enter /home directory. </p><br>
 
 <b>6. cat</b><br>
 
-<p>The cat command will display the contents of a file. For example, if we have a file named "informations.txt", the command <span class="boxed-text">cat informations.txt</span> will show its content in the terminal.</p><br>
+<p>The cat command will display the contents of a file. For example, if we have a file named "informations.txt", the command <span class="boxed-text">cat informations.txt</span> will show its content in the terminal.</p><br>  <b>7. nano</b><br>
 
-<b>7. nano</b><br>
-
-<p>Nano is a text editing tool. While the <span class="boxed-text">cat</span> command displays the content of a file in the terminal (without allowing editing), nano allows us to create and edit files.</p>
-
-<p>First, we need to check if nano is installed by typing <span class="boxed-text">nano</span> in the terminal. If it’s not installed, we can install it using <span class="boxed-text">sudo apt install nano</span>. Once installed, we can open nano (enter <span class="boxed-text">nano</span> in the terminal) to create a new file, enter text, and close it by pressing CTRL+X, then Y to save, and finally entering the file name and pressing ENTER.<br>
-
-To edit an existing file, we type nano followed by the file name: <span class="boxed-text">nano informations.txt</span>. After making changes, we close with CTRL+X, confirm saving with Y, and press ENTER.</p><br>
+<p>Nano is a text editing tool. While the <span class="boxed-text">cat</span> command displays the content of a file in the terminal (without allowing editing), nano allows us to create and edit files.</p>  <p>First, we need to check if nano is installed by typing <span class="boxed-text">nano</span> in the terminal. If it’s not installed, we can install it using <span class="boxed-text">sudo apt install nano</span>. Once installed, we can open nano (enter <span class="boxed-text">nano</span> in the terminal) to create a new file, enter text, and close it by pressing CTRL+X, then Y to save, and finally entering the file name and pressing ENTER.<br>  To edit an existing file, we type nano followed by the file name: <span class="boxed-text">nano informations.txt</span>. After making changes, we close with CTRL+X, confirm saving with Y, and press ENTER.</p><br>
 
 <b>8. rm</b><br>
 
-<p>The <span class="boxed-text">rm</span> command (remove) deletes a file. For example, the command <span class="boxed-text">rm informations.txt</span> will delete the file informations.txt.<br>
-
-Warning: The rm command only works for deleting files, not folders!</p><br>
+<p>The <span class="boxed-text">rm</span> command (remove) deletes a file. For example, the command <span class="boxed-text">rm informations.txt</span> will delete the file informations.txt.<br>  Warning: The rm command only works for deleting files, not folders!</p><br>
 
 <b>9. rmdir</b><br>
 
-<p>The rmdir (remove directory) command deletes an empty folder. For example, <span class="boxed-text">rmdir notes</span> will delete the notes folder, but only if it is empty. To delete a folder that contains files, use <span class="boxed-text">rm -r folder_name</span>.</p><br>
+<p>The rmdir (remove directory) command deletes an empty folder. For example, <span class="boxed-text">rmdir notes</span> will delete the notes folder, but only if it is empty. To delete a folder that contains files, use <span class="boxed-text">rm -r folder_name</span>.</p><br>  <b>10. cp</b><br>
 
-<b>10. cp</b><br>
-
-<p>The cp command (copy) copies a file from one location to another. For example, if we have the file "todolist.txt" in the /home/john/notes folder and want to copy it to /home/john/important, we use the command cp location_from location_to. In our case:<br><br>
-
-cp /home/john/notes/todolist.txt /home/john/important<br><br>
+<p>The cp command (copy) copies a file from one location to another. For example, if we have the file "todolist.txt" in the /home/john/notes folder and want to copy it to /home/john/important, we use the command cp location_from location_to. In our case:<br><br>  cp /home/john/notes/todolist.txt /home/john/important<br><br>
 
 This will create a copy of todolist.txt in the important folder while keeping the original file in the notes folder.<br><br>
 
@@ -223,44 +166,16 @@ Also, we can change the name of the copied file: cp todolist.txt ../important/re
 
 <b>11. mv</b><br>
 
-<p>The mv command move the file from a place to another. The usage is similar to the cp command: mv location_from location_to. </p>
+<p>The mv command move the file from a place to another. The usage is similar to the cp command: mv location_from location_to. </p>  <b>12. ifconfig</b><br>
 
-<b>12. ifconfig</b><br>
+<p>The ifconfig command displays network information, including the IP address. It is the Linux equivalent of ipconfig on Windows. If the command doesn’t work, you may need to install net-tools using: sudo apt install net-tools.</p><br>  <b>13. wget</b><br>
 
-<p>The ifconfig command displays network information, including the IP address. It is the Linux equivalent of ipconfig on Windows. If the command doesn’t work, you may need to install net-tools using: sudo apt install net-tools.</p><br>
+<p>The wget command download a file from internet. Usage exemple: wget https://mywebsite.com/file.txt</p><br>  <b>14. sudo</b><br>
 
-<b>13. wget</b><br>
+<p>With sudo command (super user do) you run a command as root. It is not used alone, but in combination with other commands(for exemple sudo apt install hashcat will install hashcat tool)</p><br>  <b>Other commands</b><br>
 
-<p>The wget command download a file from internet. Usage exemple: wget https://mywebsite.com/file.txt</p><br>
+<p>CTRL+C stops the running program. In Windows Subsystem for Linux (WSL), CTRL+C on a selected text will copy the text and right-click will paste it.  </main>
 
-<b>14. sudo</b><br>
-
-<p>With sudo command (super user do) you run a command as root. It is not used alone, but in combination with other commands(for exemple sudo apt install hashcat will install hashcat tool)</p><br>
-
-<b>Other commands</b><br>
-
-<p>CTRL+C stops the running program. In Windows Subsystem for Linux (WSL), CTRL+C on a selected text will copy the text and right-click will paste it.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    </main>
-    
-    
-</body>
+</body>  
 </html>
+
