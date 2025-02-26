@@ -91,16 +91,19 @@ main {
             background-color: #d3c4a1; 
         }
 .code-box {
-    background-color: #2a2a2a; /* Fundal gri-alburiu deschis */
-    border: 1px solid #d6d6d6; /* Bordură subtilă gri */
+    background-color: #2a2a2a; /* Gri închis */
+    border: 1px solid #444444; /* Bordură gri închis */
     border-radius: 5px; /* Colțuri ușor rotunjite */
-    padding: 3px 6px; /* Padding mic, similar cu textul normal */
-    color: #d3d3d3;
-    box-shadow: none; /* Fără umbră pentru a se integra mai bine */
+    padding: 12px 10px; /* Padding pe toate laturile, adăugând mai mult spațiu pe verticală */
+    padding-top: 15px; /* Crește spațiul între marginea de sus și primul rând de text */
+    font-family: "Courier New", monospace; /* Font monospace pentru un aspect de terminal */
+    color: #d1d1d1; /* Text gri deschis */
+    box-shadow: none; /* Fără umbră pentru a arăta ca un terminal */
     display: inline-block; /* Se aliniază cu textul fără să creeze blocuri mari */
     font-size: inherit; /* Se potrivește cu textul articolului */
-    line-height: 1; /* Reduce înălțimea rândului pentru a nu părea separat */
-    margin: 0; /* Elimină spațiul extra */
+    line-height: 1.6; /* Spațiu între rânduri similar cu restul articolului */
+    margin: 0; /* Elimină spațiile suplimentare */
+    white-space: pre-wrap; /* Păstrează formatarea codului */
 }
         footer {
             background-color: #333;
