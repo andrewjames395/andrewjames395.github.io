@@ -193,41 +193,41 @@ Let's imagine that we have a website that has, in its database, the following ta
         </table>
     </div><br>
 
-In the case of a login form, what the server sees is the following SQL query:<br>
+In the case of a login form, what the server sees is the following SQL query:<br><br>
 
 
 <div class="code-box">
-SELECT * FROM users WHERE username = ' ' AND password = ' '</div><br>
+SELECT * FROM users WHERE username = ' ' AND password = ' '</div><br><br>
 
 Now, let's enter a valid set of credentials: <br><br>
-
+<div class="code-box">
 Username: john_doe<br>
-Password: password123<br><br>
+Password: password123<br><br></div>
 
-The SQL interrogation to the database in our case looks like this:<br>
+The SQL interrogation to the database in our case looks like this:<br><br>
 
 <div class="code-box">
-SELECT * FROM users WHERE username = 'john' AND password = 'password123'</div><br>
+SELECT * FROM users WHERE username = 'john' AND password = 'password123'</div><br><br>
 
 After that, the server compares the entered credentials with those stored in the database. It checks if the combination john:password123 exists in the users table. Since the provided credentials are correct, the interrogation will return the TRUE value, granting access to the website.<br><br>
 
-If we enter incorrect credentials, such as mary:123456, the query will look like this:<br>
+If we enter incorrect credentials, such as mary:123456, the query will look like this:<br><br>
 
-<div class="code-box">SELECT * FROM users WHERE username = 'mary' AND password = '123456'</div><br>
+<div class="code-box">SELECT * FROM users WHERE username = 'mary' AND password = '123456'</div><br><br>
 
 Since this combination does not exist in the database, the interrogation will return the FALSE value, and we will not be able to log in.<br><br>
 
 SQL Injection is based on the modification of the input fields, to manipulate the TRUE or FALSE values from the database interogation.<br><br>
 
 As we saw earlier, for a successful login, the query must return the TRUE value. But what if, instead of entering the correct credentials (which we may not know), we close the username field (whose name the server search in the database), and open another field where we enter a correct mathematical relation or another type of equality, making the server to choose the second value. Thus, our input will looks like this:<br><br>
-
+<div class="code-box>
 Username: mary' OR '1'='1<br>
-Password: 123456' OR '1'='1<br><br>
+Password: 123456' OR '1'='1</div><br><br>
 
-Now, the interrogation is:<br>
+Now, the interrogation is:<br><br>
 
 <div class="code-box">
-SELECT * FROM users WHERE username = 'mary' OR '1'='1' AND password = '123456' OR '1'='1'</div><br>
+SELECT * FROM users WHERE username = 'mary' OR '1'='1' AND password = '123456' OR '1'='1'</div><br><br>
 
 Thus, the server checks whether the user "mary" exists or if 1=1. Since 1=1 is always TRUE, the result of the query for the username field will be TRUE. The same applies to the password field, where the server checks whether the password "123456" exists or if 1=1. Since the query result is TRUE, we will be able to log into the website. With such an input, the login will be performed in the account of the the first user in the database (usually the administrator).<br><br>
 
