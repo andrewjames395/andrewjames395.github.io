@@ -127,6 +127,7 @@ The first technique we will talk about is called SQL Injection. By exploiting th
 
 <p>First of all, we need to understand that website databases are created using a programming language called SQL (Structured Query Language). As you probably already know, each programming language has its specific usage: HTML is used for creating websites, CSS for styling the content, JavaScript for creating scripts, PHP for the connection between websites and servers etc. Therefore, SQL is used for creating databases and managing the connection between a website and its database.<br><br>
 
+
 Let's imagine that we have a website that has, in its database, the following table called "users", that contains the users's login informations:
 
 
@@ -178,13 +179,32 @@ SELECT * FROM users WHERE username = ' ' AND password = ' '<br><br>
 Now, let's enter a valid set of credentials: <br><br>
 
 Username: john_doe<br>
-Password: password123<br>
+Password: password123<br><br>
 
-The SQL interrogation to the database in our case is this:<br>
+The SQL interrogation to the database in our case looks like this:<br><br>
 
 SELECT * FROM users WHERE username = 'john' AND password = 'password123'<br><br>
 
 After that, the server compares the entered credentials with those stored in the database. It checks if the combination john:password123 exists in the users table. Since the provided credentials are correct, the interrogation will return the TRUE value, granting access to the website.<br><br>
+
+If we enter incorrect credentials, such as mary:123456, the query will look like this:<br><br>
+
+SELECT * FROM users WHERE username = 'mary' AND password = '123456'<br><br>
+
+Since this combination does not exist in the database, the interrogation will return the FALSE value, and we will not be able to log in.<br><br>
+
+SQL Injection is based on the modification of the input fields, to manipulate the TRUE or FALSE values from the database interogation.<br><br>
+
+As we saw earlier, for a successful login, the query must return the TRUE value. But what if, instead of entering the correct credentials (which we may not know), we close the username field (whose name the server search in the database), and open another field where we enter a correct mathematical relation or another type of equality, making the server to choose the second value. Thus, our input will looks like this:<br><br>
+
+Username: mary' OR '1'='1<br>
+Password: 123456' OR '1'='1<br><br>
+
+Now, the interrogation is:<br>
+
+SELECT * FROM users WHERE username = 'mary' OR '1'='1' AND password = '123456' OR '1'='1'
+
+
 
 
 
