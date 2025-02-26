@@ -197,13 +197,14 @@ Password: password123<br><br>
 
 The SQL interrogation to the database in our case looks like this:<br><br>
 
-SELECT * FROM users WHERE username = 'john' AND password = 'password123'<br><br>
+<div class="code-box">
+SELECT * FROM users WHERE username = 'john' AND password = 'password123'</div><br><br>
 
 After that, the server compares the entered credentials with those stored in the database. It checks if the combination john:password123 exists in the users table. Since the provided credentials are correct, the interrogation will return the TRUE value, granting access to the website.<br><br>
 
 If we enter incorrect credentials, such as mary:123456, the query will look like this:<br><br>
 
-SELECT * FROM users WHERE username = 'mary' AND password = '123456'<br><br>
+<div class="code-box">SELECT * FROM users WHERE username = 'mary' AND password = '123456'</div><br><br>
 
 Since this combination does not exist in the database, the interrogation will return the FALSE value, and we will not be able to log in.<br><br>
 
@@ -216,7 +217,8 @@ Password: 123456' OR '1'='1<br><br>
 
 Now, the interrogation is:<br><br>
 
-SELECT * FROM users WHERE username = 'mary' OR '1'='1' AND password = '123456' OR '1'='1'<br><br>
+<div class="code-box">
+SELECT * FROM users WHERE username = 'mary' OR '1'='1' AND password = '123456' OR '1'='1'</div><br><br>
 
 Thus, the server checks whether the user "mary" exists or if 1=1. Since 1=1 is always TRUE, the result of the query for the username field will be TRUE. The same applies to the password field, where the server checks whether the password "123456" exists or if 1=1. Since the query result is TRUE, we will be able to log into the website. With such an input, the login will be performed in the account of the the first user in the database (usually the administrator).<br><br>
 
@@ -230,7 +232,8 @@ Password: 123456<br><br>
 
 In this case, the SQL query will look like this:<br><br>
 
-SELECT * FROM users WHERE username = 'a' OR '1'='1' --' AND password = 'doesntmatter'<br><br>
+<div class="code-box">
+SELECT * FROM users WHERE username = 'a' OR '1'='1' --' AND password = 'doesntmatter'</div><br><br>
 
 
 The query for checking the password, being after the --, will be completely ignored. Thus, by using this tactic, the attacker can log in to the page of a user by only knowing the username, with the password no longer being necessary. An input like:<br><br>
@@ -240,7 +243,8 @@ Password: doesntmatter<br><br>
 
 Will produce the following SQL interrogation:<br><br>
 
-SELECT * FROM users WHERE username = 'john_doe' --' AND password = ''<br><br>
+<div class="code-box">
+SELECT * FROM users WHERE username = 'john_doe' --' AND password = 'doesntmatter'</div><br><br>
 
 Practically speaking, it this case, the server only verify if the username is ok, then it let you in. Also, we can connect to a specific account based on its ID in the database. In general, the column containing the user ID is named "id". This column is automatically created by the database. Essentially, it represents the user's number in the order in which the account was created (the first user will be assigned ID 1, the second one ID 2, and so on). <br><br>
 
