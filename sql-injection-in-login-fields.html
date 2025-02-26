@@ -226,7 +226,22 @@ Password: doesntmatter<br><br>
 
 Will produce the following SQL interrogation:<br><br>
 
-SELECT * FROM users WHERE username = 'john_doe' --' AND password = ''
+SELECT * FROM users WHERE username = 'john_doe' --' AND password = ''<br><br>
+
+Practically speaking, it this case, the server only verify if the username is ok, then it let you in. Also, we can connect to a specific account based on its ID in the database. In general, the column containing the user ID is named "id". This column is automatically created by the database. Essentially, it represents the user's number in the order in which the account was created (the first user will be assigned ID 1, the second one ID 2, and so on). <br><br>
+
+Exploiting this, an attacker could try to enter the following input:<br><br>
+
+Username: a' OR id=2<br>
+Password: a' OR '1'='1<br><br>
+
+Or<br><br>
+
+Username: a' OR id=2 --<br>
+Password: doesntmatter<br><br>
+
+An input like this will log the attacker in the account of the second user in the database, in our case as jane_smith. 
+
 
 
 
