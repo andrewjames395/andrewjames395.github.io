@@ -97,8 +97,7 @@ main {
     padding: 15px; /* Spațiu interior între margini și text */
     color: #5e0f0d; /* Text roșu */
     line-height: 1.2; /* Spațiere între rânduri */
-    margin-top: 10px; /* Spațiu mai mic sus */
-    margin-bottom: 10px; /* Spațiu mai mic jos */
+    margin: 0; /* Elimină orice margine suplimentară implicită */
 }
 
 .code-box {
@@ -202,7 +201,7 @@ SELECT * FROM users WHERE username = ' ' AND password = ' '</div><br><br>
 Now, let's enter a valid set of credentials: <br><br>
 <div class="code-box">
 Username: john_doe<br>
-Password: password123<br><br></div>
+Password: password123</div><br><br>
 
 The SQL interrogation to the database in our case looks like this:<br><br>
 
