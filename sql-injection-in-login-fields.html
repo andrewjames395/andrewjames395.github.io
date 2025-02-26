@@ -77,6 +77,26 @@ main {
             padding: 1rem;
             border-top: 2px solid white;
 
+.table-container {
+            width: 100%;
+            overflow-x: auto; /* Scroll orizontal dacă tabelul e prea lat */
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 400px; /* Asigură un minim de lățime */
+            background-color: white; /* Fundal alb pentru tabel */
+        }
+        th, td {
+            border: 1px solid #999;
+            padding: 5px 10px; /* Am redus padding-ul pe orizontală */
+            text-align: left;
+            white-space: nowrap; /* Evită trecerea pe linie nouă */
+        }
+        th {
+            background-color: #d3c4a1; /* O nuanță mai închisă de crem pentru antet */
+        }
+
     </style>
 </head>
 <body>
@@ -116,7 +136,52 @@ JavaScript is used for creating scripts on websites<br><br>
 PHP is used for connecting websites to servers, etc. <br><br>
 
 
-Therefore, SQL is used for creating databases and managing the connection between a website and its database.
+Therefore, SQL is used for creating databases and managing the connection between a website and its database.<br><br>
+
+Let's imagine that we have a website that has the following table called "users" in the database, where the login information of the website's users is stored.
+
+
+    <div class="table-container">
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Username</th>
+                <th>Password</th>
+                <th>City</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>john_doe</td>
+                <td>password123</td>
+                <td>New York</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>jane_smith</td>
+                <td>qwerty456</td>
+                <td>Los Angeles</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>mike_jones</td>
+                <td>letmein789</td>
+                <td>Chicago</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>anna_white</td>
+                <td>securepass</td>
+                <td>New York</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>chris_brown</td>
+                <td>admin123</td>
+                <td>Los Angeles</td>
+            </tr>
+        </table>
+    </div>
+
 
 
 
