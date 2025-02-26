@@ -91,16 +91,21 @@ main {
             background-color: #d3c4a1; 
         }
 .code-box {
-    width: 90%;  
-    max-width: 600px;  
-    background-color: #2d2d2d !important; /* Asigură că fundalul rămâne negru */
-    border: 2px solid white;
-    border-radius: 10px;
-    padding: 10px;
-    overflow-x: auto;
-    white-space: nowrap;
-    height: auto;
-    color: white; /* Setează culoarea textului pentru contrast */
+    background-color: #2a2a2a; /* Gri închis */
+    border: 1px solid #444444; /* Bordură gri închis */
+    border-radius: 5px; /* Colțuri ușor rotunjite */
+    padding: 10px 10px; /* Padding pe toate laturile */
+    font-family: inherit; /* Folosește fontul din întreg articolul */
+    color: #d1d1d1; /* Text gri deschis */
+    box-shadow: none; /* Fără umbră pentru a arăta ca un terminal */
+    display: flex; /* Folosim Flexbox pentru a centra textul pe verticală */
+    justify-content: center; /* Centrarea pe axa orizontală */
+    align-items: center; /* Centrarea pe axa verticală */
+    height: 100px; /* Înălțimea boxului pentru a asigura centrare pe verticală */
+    font-size: inherit; /* Se potrivește cu dimensiunea textului din articol */
+    line-height: 1.6; /* Menține aceleași spațiere între rânduri ca în restul articolului */
+    margin: 0; /* Elimină spațiile suplimentare */
+    white-space: pre-wrap; /* Păstrează formatarea codului */
 }
 
     .commandt {  
