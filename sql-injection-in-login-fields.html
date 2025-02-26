@@ -73,22 +73,22 @@ main {
 
   .table-container {
             width: 100%;
-            overflow-x: auto; /* Scroll orizontal dacă tabelul e prea lat */
+            overflow-x: auto; 
         }
         table {
             width: 100%;
             border-collapse: collapse;
-            min-width: 400px; /* Asigură un minim de lățime */
-            background-color: white; /* Fundal alb pentru tabel */
+            min-width: 400px; 
+            background-color: white; 
         }
         th, td {
             border: 1px solid #999;
-            padding: 5px 10px; /* Am redus padding-ul pe orizontală */
+            padding: 5px 10px; 
             text-align: left;
-            white-space: nowrap; /* Evită trecerea pe linie nouă */
+            white-space: nowrap; 
         }
         th {
-            background-color: #d3c4a1; /* O nuanță mai închisă de crem pentru antet */
+            background-color: #d3c4a1; 
         }
         footer {
             background-color: #333;
@@ -117,15 +117,15 @@ main {
 <b><h2>SQL Injection (SQLi) - introduction and SQLi in login fields</h2></b><br>
 
 
-<p>After learning in the previous articles how to install the Linux terminal on PC and Android, how to use this OS, what the main commands are, as well as various legal aspects about hacking, in today's article it is time to move on to actual ethical hacking.<br><br>
+<p>After learning in the previous articles how to install the Linux terminal on PC and Android, how to use this OS, what are the main commands in Linux, as well as various legal aspects about hacking, in today's article it is time to move on to actual ethical hacking.<br><br>
 
 Note: Hacking a device or website without the owner's consent is illegal. Hacking techniques can only be used legally in environments specifically designed for testing such skills, on your own devices, or in a setting where you have the owner's permission.<br><br>
 
-The first technique we will talk about is called SQL Injection. By exploiting this type of vulnerability, an attacker can gain unauthorized access to a website's database and can execute, through the input fields of the site, commands that interact with the database. In this multi-part lesson, you will learn what SQL Injection is, how to legally exploit this vulnerability, and how to protect yourself against this type of attack.</p><br>
+The first technique we will talk about is called SQL Injection. By exploiting this type of vulnerability, an attacker can gain unauthorized access to a website's database and can execute commands that interact with the database. In this multi-part lesson, you will learn what SQL Injection is, how to legally exploit this vulnerability, and how to protect yourself against this type of attack.</p><br>
 
 <b>How does SQL Injection works</b><br>
 
-<p>First of all, we need to understand that website databases are created using a programming language called SQL (Structured Query Language). As you probably already know, each programming language has its specific usage: HTML is used for creating websites,CSS for styling the content, JavaScript for creating scripts, PHP for the connection between websites and servers etc. Therefore, SQL is used for creating databases and managing the connection between a website and its database.<br><br>
+<p>First of all, we need to understand that website databases are created using a programming language called SQL (Structured Query Language). As you probably already know, each programming language has its specific usage: HTML is used for creating websites, CSS for styling the content, JavaScript for creating scripts, PHP for the connection between websites and servers etc. Therefore, SQL is used for creating databases and managing the connection between a website and its database.<br><br>
 
 Let's imagine that we have a website that has, in its database, the following table called "users", that contains the users's login informations:
 
@@ -170,6 +170,23 @@ Let's imagine that we have a website that has, in its database, the following ta
             </tr>
         </table>
     </div>
+
+In the case of a login form, what the server sees is the following SQL query:<br><br>
+
+SELECT * FROM users WHERE username = ' ' AND password = ' '<br><br>
+
+Now, let's enter a valid set of credentials: <br><br>
+
+Username: john_doe<br>
+Password: password123<br>
+
+The SQL interrogation to the database in our case is this:<br>
+
+SELECT * FROM users WHERE username = 'john' AND password = 'password123'<br><br>
+
+After that, the server compares the entered credentials with those stored in the database. It checks if the combination john:password123 exists in the users table. Since the provided credentials are correct, the interrogation will return the TRUE value, granting access to the website.<br><br>
+
+
 
 
 
