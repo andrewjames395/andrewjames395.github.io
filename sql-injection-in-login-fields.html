@@ -170,7 +170,7 @@ Let's imagine that we have a website that has, in its database, the following ta
                 <td>Los Angeles</td>
             </tr>
         </table>
-    </div>
+    </div><br><br>
 
 In the case of a login form, what the server sees is the following SQL query:<br><br>
 
@@ -200,9 +200,13 @@ As we saw earlier, for a successful login, the query must return the TRUE value.
 Username: mary' OR '1'='1<br>
 Password: 123456' OR '1'='1<br><br>
 
-Now, the interrogation is:<br>
+Now, the interrogation is:<br><br>
 
-SELECT * FROM users WHERE username = 'mary' OR '1'='1' AND password = '123456' OR '1'='1'
+SELECT * FROM users WHERE username = 'mary' OR '1'='1' AND password = '123456' OR '1'='1'<br><br>
+
+Thus, the server checks whether the user "mary" exists or if 1=1. Since 1=1 is always TRUE, the result of the query for the username field will be TRUE. The same applies to the password field, where the server checks whether the password "123456" exists or if 1=1. Since the query result is TRUE, we will be able to log into the website. With such an input, the login will be performed in the account of the the first user in the database (usually the administrator).
+
+
 
 
 
