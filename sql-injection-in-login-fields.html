@@ -229,13 +229,13 @@ Now, the interrogation is:<br><br>
 
 Thus, the server checks whether the user "mary" exists or if 1=1. Since 1=1 is always TRUE, the result of the query for the username field will be TRUE. The same applies to the password field, where the server checks whether the password is "123456" or if 1=1. Since the query result is TRUE, we will be able to log into the website. With such an input, the login will be performed in the account of the the first user in the database (usually the administrator).<br><br>
 
-There are several methods to exploit this vulnerability. In SQL, to mark a line of code that should be ignored by the programming language when executing the query (like a comment in human language created by the programmer that should not be considered by the program), we use -- (two minuses). Thus, everything that follows on that line after -- will be ignored by SQL (similar to the # in Python or PHP). The user can enter the following input:<br>
+There are several methods to exploit this vulnerability. In SQL, to mark a line of code that should be ignored by the programming language when executing the query (like a comment in human language created by the programmer that should not be considered by the program), we use -- (two minuses). Thus, everything that follows on that line after -- will be ignored by SQL (similar to the # in Python or PHP). The user can enter the following input:<br><br>
 
 <div class="code-box">Username: a' OR '1='1' --
 Password: 123456</div><br>
 
 
-In this case, the SQL query will look like this:<br>
+In this case, the SQL query will look like this:<br><br>
 
 <div class="code-box">SELECT * FROM users WHERE username = 'a' OR '1'='1' --' AND password = 'doesntmatter'</div><br>
 
@@ -244,7 +244,7 @@ The query for checking the password, being after the --, will be completely igno
 <div class="code-box">Username: john_doe' --
 Password: doesntmatter</div><br>
 
-Will produce the following SQL interrogation:<br>
+Will produce the following SQL interrogation:<br><br>
 
 <div class="code-box">SELECT * FROM users WHERE username = 'john_doe' --' AND password = 'doesntmatter'</div><br>
 
