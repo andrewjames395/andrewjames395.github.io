@@ -137,7 +137,7 @@ main {
 <b><h2>SQL Injection (SQLi) - introduction and SQLi in login fields</h2></b><br>
 
 
-<p>After learning in the previous articles how to install the Linux terminal on PC and Android, how to use this OS, what are the main commands in Linux, as well as various legal aspects about hacking, in today's article it is time to move on to actual ethical hacking.<br>
+<p>After learning in the previous articles how to install the Linux terminal on PC and Android, what are the main commands in Linux, as well as various legal aspects about hacking, in today's article it is time to move on to actual ethical hacking.<br>
 
 <div class="note-box">Note: Hacking a server or website without the owner's consent is illegal. Hacking techniques can only be used legally in environments specifically designed for testing such skills, on your own devices, or in a setting where you have the owner's permission.</div><br>
 
@@ -197,6 +197,8 @@ In the case of a login form, what the server sees is the following SQL query:<br
 
 <div class="code-box">
 SELECT * FROM users WHERE username = ' ' AND password = ' '</div><br><br>
+
+The explanation of the query in human language is: "Select all from the tabel called "users" where the value of the "username" column is ' ' and the value of the "password" column is ' '.<br><br>
 
 Now, let's enter a valid set of credentials: <br><br>
 <div class="code-box">
