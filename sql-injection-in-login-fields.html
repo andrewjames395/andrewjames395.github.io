@@ -265,7 +265,40 @@ Or<br><br>
 Username: a' OR id=2 --<br>
 Password: doesntmatter<br><br>
 
-An input like this will log the attacker in the account of the second user in the database, in our case as jane_smith. 
+An input like this will log the attacker in the account of the second user in the database, in our case as jane_smith.<br><br>
+
+We can continue with the testing, and instead of using "id," we can use other columns from the table. For this, we need to know the column names, although they can often be guessed using the registration form. We can input:<br>
+
+
+<div class="code-box">Username: a' OR city='Los Angeles' --
+Password: doesntmatter</div><br>
+
+Using such credentials will log us into the account of the first user in the database who lives in Los Angeles,în our case jane_smith. Additionally, we can log in even if we only know the password but not the username by entering:
+
+<div class="code-box">Username: a' OR '1'='1
+Password: letmein789</div><br>
+
+There are countless combinations like this that we can use. Moreover, in the case of a website vulnerable to SQL Injection, an attacker can do much more than just log into different user accounts. They can execute commands in the database, such as adding new users, changing existing passwords, deleting users, or even wiping the entire table. In this scenario, SQL programming knowledge is an advantage. However, even without programming skills, this is not a problem, as there are tools that can automate the process.<br><br>
+
+It is also very important that, when legally exploiting an SQLi vulnerability, our input to be syntactically correct (e.g., avoiding misplaced apostrophes or incorrect syntax), to ensure a successful connection.</p><br>
+
+<b>How do I test for SQL Injection<b><br>
+
+<p>To check if a login field is vulnerable to SQL Injection, you can enter an apostrophe in one of the fields or use another character that interacts with SQL logic (such as ;, ', or "). If, after pressing the login button, you receive an output like "SQL Syntax Error", then the site is most likely vulnerable.</p><br>
+
+<b>Where can I prectice SQLi attack legally<b><br>
+
+<p>There are several websites on the internet where this technique can be legally practiced. One of them is altoro.testfire.net, which simulates a banking website and is intentionally designed to be vulnerable to SQL Injection.<br><br>
+
+Another is juice-shop.herokuapp.com, which simulates a juice shop and is intentionally built with multiple types of vulnerabilities, including SQL Injection in the login fields.</p><br>
+
+
+<b>How common is the SQLi vulnerability in login fields today?<b><br
+
+<p>Even if SQL injection is one of the most common vulnerability, however, in the current year, this type of SQLi (in login field injection) is very difficult to find. It may still be encountered on older websites that have not been maintained or maybe on websites from less developed countries, but human error can occur anywhere.<br><br>
+
+In the next article, we will discuss a much more common vulnerability today: SQL Injection in URLs. We will also use special tools to legally extract the content of its tables.</p>
+
 
 
 
