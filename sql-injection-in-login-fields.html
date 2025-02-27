@@ -262,13 +262,13 @@ Password: doesntmatter</div><br>
 
 An input like this will log the attacker in the account of the second user in the database, in our case as jane_smith.<br><br>
 
-We can continue with the testing, and instead of using "id," we can use other columns from the table. For this, we need to know the column names, although they can often be guessed using the registration form. We can input:<br>
+We can continue with the testing, and instead of using "id," we can use other columns from the table. For this, we need to know the column names, although they can often be guessed using the registration form. We can input:<br><br>
 
 
 <div class="code-box">Username: a' OR city='Los Angeles' --
 Password: doesntmatter</div><br>
 
-Using such credentials will log us into the account of the first user in the database who lives in Los Angeles,în our case jane_smith. Additionally, we can log in even if we only know the password but not the username by entering:
+Using such credentials will log us into the account of the first user in the database who lives in Los Angeles,în our case jane_smith. Additionally, we can log in even if we only know the password but not the username by entering:<br><br>
 
 <div class="code-box">Username: a' OR '1'='1
 Password: letmein789</div><br>
@@ -283,9 +283,9 @@ It is also very important that, when legally exploiting an SQLi vulnerability, o
 
 <b>Where can I prectice SQLi attack legally</b><br>
 
-<p>There are several websites on the internet where this technique can be legally practiced. One of them is altoro.testfire.net, which simulates a banking website and is intentionally designed to be vulnerable to SQL Injection.<br><br>
+<p>There are several websites on the internet where this technique can be legally practiced. One of them is <a href="altoro.testfire.net>altoro.testfire.net</a>, which simulates a banking website and is intentionally designed to be vulnerable to SQL Injection.<br><br>
 
-Another is juice-shop.herokuapp.com, which simulates a juice shop and is intentionally built with multiple types of vulnerabilities, including SQL Injection in the login fields.</p><br>
+Another is <a href="juice-shop.herokuapp.com">juice-shop.herokuapp.com, which simulates a juice shop and is intentionally built with multiple types of vulnerabilities, including SQL Injection in the login fields.</p><br>
 
 
 <b>How common is the SQLi vulnerability in login fields today?</b><br>
