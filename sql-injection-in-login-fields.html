@@ -210,9 +210,9 @@ The SQL interrogation to the database in our case looks like this:<br><br>
 
 <div class="code-box">SELECT * FROM users WHERE username = 'john' AND password = 'password123'</div><br>
 
-After that, the server compares the entered credentials with those stored in the database. It checks if the combination john_doe:password123 exists in the users table. Since the provided credentials are correct, the interrogation will return the TRUE value, granting access to the website. Basically, the server asks the database: Does the username john_doe exists? TRUE! Does he has the password password123? TRUE! Then you can login.<br><br>
+After that, the server compares the entered credentials with those stored in the database. It checks if the combination "john_doe:password123" exists in the users table. Since the provided credentials are correct, the interrogation will return the TRUE value, granting access to the website. Basically, the server asks the database: Does the username "john_doe" exists? TRUE! Does he has the password "password123"? TRUE! Then you can enter.<br><br>
 
-If we enter incorrect credentials, such as mary:123456, the query will look like this:<br><br>
+If we enter incorrect credentials, such as "mary:123456", the query will look like this:<br><br>
 
 <div class="code-box">SELECT * FROM users WHERE username = 'mary' AND password = '123456'</div><br>
 
@@ -252,11 +252,6 @@ Practically speaking, it this case, the server only verify if the username is ok
 
 Exploiting this, an attacker could try to enter the following input:<br><br>
 
-<div class="code-box">Username: a' OR id=2
-Password: a' OR '1'='1</div><br>
-
-Or<br><br>
-
 <div class="code-box">Username: a' OR id=2 --
 Password: doesntmatter</div><br>
 
@@ -267,6 +262,7 @@ We can continue with the testing, and instead of using "id," we can use other co
 
 <div class="code-box">Username: a' OR city='Los Angeles' --
 Password: doesntmatter</div><br>
+
 
 Using such credentials will log us into the account of the first user in the database who lives in Los Angeles,în our case jane_smith. Additionally, we can log in even if we only know the password but not the username by entering:<br><br>
 
