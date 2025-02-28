@@ -219,7 +219,7 @@ Since this combination does not exist in the database, the interrogation will re
 
 SQL Injection is based on the modification of the input fields, to manipulate the TRUE or FALSE values from the database interogation. As we saw earlier, for a successful login, the query must return the TRUE value. But what if, instead of entering the correct credentials (which we may not know), we close the username field (whose name the server search in the database), and open another field where we enter a correct mathematical relation or another type of equality, making the server to choose the second value. Thus, our input will looks like this:<br><br>
 
-<div class="code-box">Username: mary' OR '1'='1<br>
+<div class="code-box">Username: mary' OR '1'='1
 Password: 123456' OR '1'='1</div><br>
 
 Now, the interrogation is:<br><br>
