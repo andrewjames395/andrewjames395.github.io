@@ -211,9 +211,9 @@ Let's imagine that we have a website that has, in its database, the following ta
 In the case of a login form, what the server sees is the following SQL query:<br><br>
 
 
-<div class="code-box">SELECT * FROM users WHERE username = ' ' AND password = ' '</div><br>
+<div class="code-box">SELECT * FROM users WHERE username = <span>' '</span> AND password = <span>' '</span></div><br>
 
-The explanation of the query in human language is: "Select all from the "users" table where the value of the "username" column is ' ' and the value of the "password" column is ' '.<br><br>
+The explanation of the query in human language is: Select all from the "users" table where the value of the "username" column is <span>' '</span> and the value of the "password" column is <span>' '</span>.<br><br>
 
 Now, let's enter a valid set of credentials: <br><br>
 <div class="code-box2">Username: john_doe
