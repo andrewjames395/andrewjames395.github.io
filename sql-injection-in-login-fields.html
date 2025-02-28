@@ -213,10 +213,10 @@ In the case of a login form, what the server sees is the following SQL query:<br
 
 <div class="code-box">SELECT * FROM users WHERE username = ' ' AND password = ' '</div><br>
 
-The explanation of the query in human language is: "Select all from the tabel called "users" where the value of the "username" column is ' ' and the value of the "password" column is ' '.<br><br>
+The explanation of the query in human language is: "Select all from the "users" table where the value of the "username" column is ' ' and the value of the "password" column is ' '.<br><br>
 
 Now, let's enter a valid set of credentials: <br><br>
-<div class="code-box">Username: john_doe
+<div class="code-box2">Username: john_doe
 Password: password123</div><br>
 
 The SQL interrogation to the database in our case looks like this:<br><br>
@@ -233,7 +233,7 @@ Since this combination does not exist in the database, the interrogation will re
 
 SQL Injection is based on the modification of the input fields, to manipulate the TRUE or FALSE values from the database interogation. As we saw earlier, for a successful login, the query must return the TRUE value. But what if, instead of entering the correct credentials (which we may not know), we close the username field (whose name the server search in the database), and open another field where we enter a correct mathematical relation or another type of equality, making the server to choose the second value. Thus, our input will looks like this:<br><br>
 
-<div class="code-box">Username: mary' OR '1'='1
+<div class="code-box2">Username: mary' OR '1'='1
 Password: 123456' OR '1'='1</div><br>
 
 Now, the interrogation is:<br><br>
@@ -244,7 +244,7 @@ Thus, the server checks whether the user "mary" exists or if 1=1. Since 1=1 is a
 
 There are several methods to exploit this vulnerability. In SQL, to mark a line of code that should be ignored by the programming language when executing the query (like a comment in human language created by the programmer that should not be considered by the program), we use -- (two minuses). Thus, everything that follows on that line after -- will be ignored by SQL (similar to the # in Python or PHP). The user can enter the following input:<br><br>
 
-<div class="code-box">Username: a' OR '1='1' --
+<div class="code-box2">Username: a' OR '1='1' --
 Password: 123456</div><br>
 
 
@@ -254,7 +254,7 @@ In this case, the SQL query will look like this:<br><br>
 
 The query for checking the password, being after the --, will be completely ignored. Thus, by using this tactic, the attacker can log in to the page of a user by only knowing the username, with the password no longer being necessary. An input like:<br><br>
 
-<div class="code-box">Username: john_doe' --
+<div class="code-box2">Username: john_doe' --
 Password: doesntmatter</div><br>
 
 Will produce the following SQL interrogation:<br><br>
@@ -265,7 +265,7 @@ Practically speaking, it this case, the server only verify if the username is ok
 
 Exploiting this, an attacker could try to enter the following input:<br><br>
 
-<div class="code-box">Username: a' OR id=2 --
+<div class="code-box2">Username: a' OR id=2 --
 Password: doesntmatter</div><br>
 
 An input like this will log the attacker in the account of the second user in the database, in our case as jane_smith.<br><br>
@@ -273,13 +273,13 @@ An input like this will log the attacker in the account of the second user in th
 We can continue with the testing, and instead of using "id," we can use other columns from the table. For this, we need to know the column names, although they can often be guessed using the registration form. We can input:<br><br>
 
 
-<div class="code-box">Username: a' OR city='Los Angeles' --
+<div class="code-box2">Username: a' OR city='Los Angeles' --
 Password: doesntmatter</div><br>
 
 
 Using such credentials will log us into the account of the first user in the database who lives in Los Angeles,în our case jane_smith. Additionally, we can log in even if we only know the password but not the username by entering:<br><br>
 
-<div class="code-box">Username: a' OR '1'='1
+<div class="code-box2">Username: a' OR '1'='1
 Password: letmein789</div><br>
 
 There are countless combinations like this that we can use. Moreover, in the case of a website vulnerable to SQL Injection, an attacker can do much more than just log into different user accounts. They can execute commands in the database, such as adding new users, changing existing passwords, deleting users, or even wiping the entire table. In this scenario, SQL programming knowledge is an advantage. However, even without programming skills, this is not a problem, as there are tools that can automate the process.<br><br>
