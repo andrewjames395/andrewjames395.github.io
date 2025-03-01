@@ -238,7 +238,7 @@ If we enter incorrect credentials, such as "mary:123456", the query will look li
 
 Since this combination does not exist in the database, the interrogation will return the FALSE value, and we will not be able to log in.<br><br>
 
-SQL Injection is based on the modification of the input fields, to manipulate the TRUE or FALSE values from the database interogation. As we saw earlier, for a successful login, the query must return the TRUE value. But what if, instead of entering the correct credentials (which we may not know), we close the username field (whose name the server search in the database), and open another field where we enter a correct mathematical relation or another type of equality, making the server to choose the second value. Thus, our input will looks like this:<br><br>
+SQL Injection is based on the modification of the input fields, to manipulate the TRUE or FALSE values from the database interogation. As we saw earlier, for a successful login, the query must return the TRUE value. But what if, instead of entering the correct credentials (which we may not know), we close the username/password field (whose name the server search for in the database), and open another field where we enter a correct mathematical relation or another type of equality, making the server to choose the second value. Thus, our input will looks like this:<br><br>
 
 <div class="code-box2">Username: mary' OR '1'='1
 Password: 123456' OR '1'='1</div><br>
@@ -282,7 +282,7 @@ An input like this will log the attacker in the account of the second user in th
 Password: doesntmatter</div><br>
 
 
-Using such credentials will log us into the account of the first user in the database who lives in Los Angeles,în our case jane_smith. Additionally, we can log in even if we only know the password but not the username by entering:<br><br>
+Using such credentials will log us into the account of the first user in the database who lives in Los Angeles, in our case jane_smith. Additionally, we can log in even if we only know the password but not the username by entering:<br><br>
 
 <div class="code-box2">Username: a' OR '1'='1
 Password: letmein789</div><br>
