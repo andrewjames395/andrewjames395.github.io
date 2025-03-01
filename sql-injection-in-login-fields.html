@@ -150,10 +150,10 @@ color: #ffffff;
 
     <main>
 
-<b><h2>SQL Injection (SQLi) - introduction and SQLi in login fields</h2></b><br>
-<div class="image-container"><img src="https://inside.wooster.edu/technology/wp-content/uploads/sites/83/2020/10/Screen-Shot-2020-10-15-at-2.32.44-PM.png" alt="SQLi"></div><br>
+<b><h2>SQL Injection (SQLi) - introduction and SQLi in login fields</h2></b>
+<div class="image-container"><img src="https://inside.wooster.edu/technology/wp-content/uploads/sites/83/2020/10/Screen-Shot-2020-10-15-at-2.32.44-PM.png" alt="SQLi"></div>
 
-<p>After learning in the previous articles how to install the Linux terminal on PC and Android, what are the main commands in Linux, as well as various legal aspects about hacking, in today's article it is time to move on to actual ethical hacking.<br>
+<p>After learning in the previous articles how to install the Linux terminal on PC and Android, what the main commands in Linux are, how to use this operating system, as well as various legal aspects about hacking, in today's article it is time to move on to actual ethical hacking.<br>
 
 <div class="note-box">Note: Hacking a server or website without the owner's consent is illegal. Hacking techniques can only be used legally in environments specifically designed for testing such skills, on your own devices, or in a setting where you have the owner's permission.</div><br><br>
 
@@ -236,7 +236,7 @@ SQL Injection is based on the modification of the input fields, to manipulate th
 <div class="code-box2">Username: mary' OR '1'='1
 Password: 123456' OR '1'='1</div><br>
 
-Now, the interrogation is:<br><br>
+Now, the interrogation becomes:<br><br>
 
 <div class="code-box">SELECT * FROM users WHERE username = 'mary' OR '1'='1' AND password = '123456' OR '1'='1'</div><br>
 
@@ -268,9 +268,7 @@ Exploiting this, an attacker could try to enter the following input:<br><br>
 <div class="code-box2">Username: a' OR id=2 --
 Password: doesntmatter</div><br>
 
-An input like this will log the attacker in the account of the second user in the database, in our case as jane_smith.<br><br>
-
-We can continue with the testing, and instead of using "id," we can use other columns from the table. For this, we need to know the column names, although they can often be guessed using the registration form. We can input:<br><br>
+An input like this will log the attacker in the account of the second user in the database, in our case jane_smith. We can continue with the testing, and instead of using "id," we can use other columns from the table. For this, we need to know the column names, although they can often be guessed using the registration form. We can input:<br><br>
 
 
 <div class="code-box2">Username: a' OR city='Los Angeles' --
@@ -294,7 +292,7 @@ It is also very important that, when legally exploiting an SQLi vulnerability, o
 
 <p>There are several websites on the internet where this technique can be legally practiced. One of them is <a href="http://altoro.testfire.net">altoro.testfire.net</a>, which simulates a banking website and is intentionally designed to be vulnerable to SQL Injection.<br><br>
 
-Another is <a href="https://juice-shop.herokuapp.com">juice-shop.herokuapp.com</a>, which simulates a juice shop and is intentionally built with multiple types of vulnerabilities, including SQL Injection in the login fields.</p><br>
+Another is <a href="https://juice-shop.herokuapp.com/#/">juice-shop.herokuapp.com</a>, which simulates a juice shop and is intentionally built with multiple types of vulnerabilities, including SQL Injection in the login fields.</p><br>
 
 
 <b>How common is the SQLi vulnerability in login fields today?</b><br>
