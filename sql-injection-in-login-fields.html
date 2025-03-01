@@ -247,7 +247,7 @@ Password: 123456</div><br>
 
 In this case, the SQL query will look like this:<br><br>
 
-<div class="code-box">SELECT * FROM users WHERE username = 'a' OR '1'='1' --' AND password = 'doesntmatter'</div><br>
+<div class="code-box">SELECT * FROM users WHERE username = 'a' OR '1'='1' <span style="color: gray;">--' AND password = 'doesntmatter'</span></div><br>
 
 The query for checking the password, being after the --, will be completely ignored. Thus, by using this tactic, the attacker can log in to the page of a user by only knowing the username, with the password no longer being necessary. An input like:<br><br>
 
@@ -256,7 +256,7 @@ Password: doesntmatter</div><br>
 
 Will produce the following SQL interrogation:<br><br>
 
-<div class="code-box">SELECT * FROM users WHERE username = 'john_doe' --' AND password = 'doesntmatter'</div><br>
+<div class="code-box">SELECT * FROM users WHERE username = 'john_doe' <span style="color: gray;">--' AND password = 'doesntmatter'</span></div><br>
 
 Practically speaking, it this case, the server only verify if the username is ok, then it let you in. Depending on how the interrogation is created, many times we have to use # instead of --, but we will discuss this in another article. Also, we can connect to a specific account based on its ID in the database. In general, the column containing the user ID is named "id". This column is automatically created by the database. Essentially, it represents the user's number in the order in which the account was created (the first user will be assigned ID 1, the second one ID 2, and so on). <br><br>
 
