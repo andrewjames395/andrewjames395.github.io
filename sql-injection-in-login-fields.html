@@ -228,7 +228,7 @@ Password: password123</div><br>
 
 The SQL interrogation to the database in our case looks like this:<br><br>
 
-<div class="code-box">SELECT * FROM users WHERE username = 'john' AND password = 'password123'</div><br>
+<div class="code-box">SELECT * FROM users WHERE username = 'john_doe' AND password = 'password123'</div><br>
 
 After that, the server compares the entered credentials with those stored in the database. It checks if the combination "john_doe:password123" exists in the users table. Since the provided credentials are correct, the interrogation will return the TRUE value, granting access to the website. Basically, the server asks the database: Does the username "john_doe" exists? TRUE! Does he has the password "password123"? TRUE! Then you can enter.<br><br>
 
