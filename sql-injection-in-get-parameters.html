@@ -1,3 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            background-color: #5e0f0d;
+            color: #b79323;
+            text-align: center;
+            justify-content: center;
+            display: flex;
+            padding: 1rem 0;
+            width: 100%;
+            height: 100px;
+            align-items: center;
+        }
+        
+
+        
+        .menu {
+            border-top: 2px solid white;
+            background-color: #5e0f0d;
+            padding: 0.5rem 0;
+            text-align: center;
+        }
+
+        .menu a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1rem;
+        }
+
+        .menu a:hover {
+            text-decoration: underline;
+        }
+
+       
+main {
+            padding: 1rem;
+        }
+        .text-content {
+            margin-bottom: 1rem;
+        }
+        .image-container {
+            text-align: center;
+            margin: 1rem 0;
+        }
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+        .boxed-text {
+    display: inline-block;
+    border: 1px solid black;
+    background-color: #d3d3d3;
+    border-radius: 5px;
+    padding: 3px 6px;
+    color: black;
+    margin-top: 0;
+    line-height: 1;
+        }
+
+  .table-container {
+            width: 100%;
+            overflow-x: auto; 
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 400px; 
+            background-color: white; 
+        }
+        th, td {
+            border: 1px solid #999;
+            padding: 5px 10px; 
+            text-align: left;
+            white-space: nowrap; 
+        }
+        th {
+            background-color: #d3c4a1; 
+        }
+.note-box {
+    border: 2px solid red; /* Margine roșie subțire */
+    background-color: rgba(255, 0, 0, 0.05); /* Roșu foarte subtil */
+    color: red; /* Text roșu */
+    padding: 12px 18px; /* Spațiu interior echilibrat */
+    display: inline-block; /* Se adaptează la conținut */
+    border-radius: 5px; /* Colțuri ușor rotunjite */
+    font-family: Arial, sans-serif; /* Font curat */
+    font-weight: normal; /* Text obișnuit */
+}
+
+a {
+  text-decoration: none;
+}
+
+    
+.code-box {
+    background-color: #f4f4f4; /* Fundal gri deschis */
+    border: 1px solid #ddd; /* Bordură subțire gri */
+    border-radius: 8px; /* Colțuri rotunjite */
+    padding: 10px; /* Spațiu interior */
+    line-height: 1.2; /* Spațiere între linii */
+    display: block; /* Face ca elementul să ocupe întreaga lățime */
+    white-space: pre-wrap; /* Menține formatul codului și permite textului să se împartă pe mai multe linii */
+    max-width: 100%; /* Se asigură că nu depășește lățimea containerului */
+}
+
+.code-box2 {
+    background-color: #f4f4f4; /* Fundal gri deschis */
+    border: 1px solid #ddd; /* Bordură subțire gri */
+    border-radius: 8px; /* Colțuri rotunjite */
+    padding: 10px; /* Spațiu interior */
+    line-height: 1.2; /* Spațiere între linii */
+    display: block; /* Face ca elementul să ocupe întreaga lățime */
+    white-space: pre-wrap; /* Menține formatul codului și permite textului să se împartă pe mai multe linii */
+    max-width: 100%; /* Se asigură că nu depășește lățimea containerului */
+}
+        footer {
+            background-color: #333;
+            color: white; 
+            text-align: center;
+            padding: 1rem;
+            border-top: 2px solid white;
+
+}
+
+  .blue-link {
+    color: #cc0000; /* Albastru potrivit pentru fundalul #f9f9f9 */
+    text-decoration: none;
+  }
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <h2><b>andrewjames395.github.io</b></h2>
+    </header>
+
+        <div class="menu">
+        <a href="https://andrewjames395.github.io">Home</a>
+        <a href="#about">About</a>
+        <a href="https://andrewjames395.github.io/support.html">Support</a>
+    </div>
+
+    <main>
+
 <p>In the previous article, we learned what SQL Injection is. We saw that this vulnerability is based on modifying input fields to manipulate TRUE and FALSE results in database queries, allowing us to obtain the TRUE value necessary for logging into a site when credentials are unknown. However, besides the login form, there are multiple places on a website where such a query exists.<br><br>
 
 You’ve probably seen,while browsing the web, links that looks like these:<br><br>
@@ -45,3 +204,9 @@ sqlmap https://exemple.com/documents.php?id=1 -dbs<br><br>
 
 We added the -dbs option so that the program doesn’t just test for vulnerabilities but also displays the names of the databases if the site is vulnerable to SQL Injection.
 
+
+
+
+
+</main>
+</html>
