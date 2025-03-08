@@ -1,0 +1,47 @@
+<p>In the previous article, we learned what SQL Injection is. We saw that this vulnerability is based on modifying input fields to manipulate TRUE and FALSE results in database queries, allowing us to obtain the TRUE value necessary for logging into a site when credentials are unknown. However, besides the login form, there are multiple places on a website where such a query exists.<br><br>
+
+You’ve probably seen,while browsing the web, links that looks like these:<br><br>
+
+https://exemple.com/documents.php?id=1<br><br>
+https://myshop.com/products.php?cat=garden <br><br>
+http://myphotos.uk/photos.php?year=2017&month=may<br><br>
+
+These types of links, which contain a ?, are links with GET parameters. Essentially, GET parameters are used to request data from a database. To better understand this, let’s analyze the first link mentioned:<br><br>
+
+https://exemple.com/documents.php?id=1<br><br>
+
+A link like this is characterized by a ?, followed by a GET parameter (in our case, id), an = sign, and a value (in our case, 1). These types of pages make database inte to display stored content on the page. In our example, the link sends a request that may look like this:<br><br>
+
+SELECT * FROM documents WHERE id = 1<br><br>
+
+To check if the page is vulnerable to SQL Injection, we add an apostrophe at the end of the URL. This way, our link now looks like this:<br><br>
+
+https://exemple.com/documents.php?id=1'
+
+If, after pressing Enter, the page returns an output like "You have an error in your SQL syntax", the site is most likely vulnerable. However, even if the page loads normally, that doesn’t necessarily mean the site isn’t vulnerable, so we will continue testing.<br><br>
+
+To exploit this type of vulnerability (GET parameter SQL Injection), we will use a special tool in our Linux terminal called sqlmap. Sqlmap is one of the most powerful and widely used hacking tools, specifically designed for SQL Injection. This tool comes pre-installed in Linux OS, but on Windows Subsystem for Linux and in UserLAnd on Android, it needs to be installed manually.</p><br>
+
+<b>Installing sqlmap</b><br>
+
+<p>In your Linux terminal, type sqlmap. If you get an error like "command not found", it means the application is not installed on your device. To install it, use the command:<br><br>
+
+sudo apt install sqlmap<br><br>
+
+After installation, run sqlmap again. If the terminal displays the tool's startup page, featuring a syringe logo and usage instructions, everything worked perfectly. However, if you encounter issues when running sudo apt install sqlmap, your system is likely outdated. In this case, try "sudo apt update && sudo apt upgrade", then try to install the application again.<br><br>
+
+Now that we have sqlmap installed on our device, it’s time to proceed with ethical hacking.<br><br>
+
+
+---
+
+Sqlmap follows the structure:<br><br>
+
+sqlmap link_with_parameter<br><br>
+
+So, in our case, we will enter the following command:<br><br>
+
+sqlmap https://exemple.com/documents.php?id=1 -dbs<br><br>
+
+We added the -dbs option so that the program doesn’t just test for vulnerabilities but also displays the names of the databases if the site is vulnerable to SQL Injection.
+
