@@ -176,6 +176,19 @@ These types of links contain GET parameters. To understand this better, let's an
 https://mywebsite.com/documents.php?id=1
 <br><br>
 
+A link with a GET parameter is characterized by a "?", followed by the GET parameter (in our case, "id"), an "=" sign, and a value (in this case, 1). Essentially, links with GET parameters send a request to the database to retrieve and display stored content on the page. In our example, the corresponding SQL query would look something like this:<br><br>
+
+SELECT * FROM documents WHERE id = 1;
+<br><br>
+
+To test if our page is vulnerable to SQL Injection, we append an apostrophe to the end of the link:<br><br>
+
+https://mywebsite.com/documents.php?id=1'
+
+<br><br>
+
+If executing this link returns an error message like "You have an error in your SQL syntax", the site is most likely vulnerable. However, even if the page loads normally, that does not necessarily mean the site is secure, so we will continue testing further.
+
 
 
 
