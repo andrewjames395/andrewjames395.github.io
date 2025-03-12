@@ -214,11 +214,11 @@ To test if our page is vulnerable to SQL Injection, we append an apostrophe to t
 
 <br>
 
-If executing this link returns an error message like "You have an error in your SQL syntax", the site is most likely vulnerable. However, even if the page loads normally, that does not necessarily mean the site is secure, so we will continue testing further.<br><br>
+If executing this link returns an error message like "You have an error in your SQL syntax", the site is most likely vulnerable. However, even if the page loads normally, that does not necessarily mean the site is secure, so we will continue testing further. To exploit this type of vulnerability (GET parameter SQL Injection), we will use a special tool called sqlmap. Sqlmap is one of the most powerful and widely used hacking tools, specifically focused on SQL Injection. </p><br>
 
-To exploit this type of vulnerability (GET parameter SQL Injection), we will use a special tool called sqlmap. Sqlmap is one of the most powerful and widely used hacking tools, specifically focused on SQL Injection.
+<b>Installing sqlmap </b><br>
 
-
+<p>In your Linux terminal, if you haven't already, update your system using the following command: "sudo apt update && sudo apt upgrade". Then, install sqlmap by running: "sudo apt install sqlmap". Once the installation is complete, type "sqlmap" in the terminal. If the application's welcome screen appears, displaying its logo and usage instructions, it means everything was installed successfully.
 
 
 
