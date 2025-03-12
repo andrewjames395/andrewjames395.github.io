@@ -126,7 +126,29 @@ a {
     display: block; /* Face ca elementul să ocupe întreaga lățime */
     white-space: pre-wrap; /* Menține formatul codului și permite textului să se împartă pe mai multe linii */
     max-width: 100%; /* Se asigură că nu depășește lățimea containerului */
+    overflow-x: auto;
 }
+
+.terminal {
+    width: 90%;  
+    max-width: 600px;  
+    background-color: #2d2d2d !important; /* Asigură că fundalul rămâne negru */
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 10px;
+    overflow-x: auto;
+    white-space: nowrap;
+    height: auto;
+    color: white; /* Setează culoarea textului pentru contrast */
+}
+.username {  
+        color: #66cc66; /* Verde închis pentru numele de utilizator */  
+    }  
+
+    .commandt {  
+        color: white;  
+    }  
+
         footer {
             background-color: #333;
             color: white; 
@@ -165,15 +187,15 @@ a {
 
 You have probably seen links like these while browsing the web:<br><br>
 
-https://mywebsite.com/documents.php?id=1 
+<div class="code-box2">https://mywebsite.com/documents.php?id=1 
 https://gogoshop.com/products.php?cat=fruits  
-https://myphotos.uk/photos.php?year=2018&month=may
+https://myphotos.uk/photos.php?year=2018&month=may</div>
 
 <br><br>
 
 These types of links contain GET parameters. For a better understanding, let's analyze the first link:<br><br>
 
-https://mywebsite.com/documents.php?id=1
+<div class="code-box2">https://mywebsite.com/documents.php?id=1</div>
 <br><br>
 
 A link with a GET parameter is characterized by a "?", followed by the GET parameter (in our case, "id"), an "=" sign, and a value (in this case, 1). Essentially, links with GET parameters send a request to the database to retrieve and display stored content on the page. In our example, the corresponding SQL query would look something like this:<br><br>
