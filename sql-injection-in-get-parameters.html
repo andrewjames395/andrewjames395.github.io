@@ -121,16 +121,16 @@ a {
 }
 
 .code-box2 {
-    width: 100%;  
-    max-width: 600px;  
-    background-color: #f4f4f4 !important; /* Asigură că fundalul rămâne negru */
-    border: 2px solid white;
-    border-radius: 10px;
-    padding: 10px;
-    overflow-x: auto;
-    white-space: nowrap;
-    height: auto;
-    color: black; /* Setează culoarea textului pentru contrast */
+    background-color: #2d2d2d !important; /* Fundal gri închis */
+    border: 1px solid #ddd; /* Bordură subțire gri */
+    border-radius: 8px; /* Colțuri rotunjite */
+    padding: 10px; /* Spațiu interior */
+    line-height: 1.2; /* Spațiere între linii */
+    display: block; /* Face ca elementul să ocupe întreaga lățime */
+    overflow-x: auto; /* Activează scroll-ul orizontal */
+    white-space: pre; /* Menține formatul codului */
+    max-width: 100%; /* Se asigură că nu depășește lățimea containerului */
+    font-size: 17.5px; /* Setează dimensiunea fontului */
 }
 
 .terminal {
@@ -216,9 +216,18 @@ To test if our page is vulnerable to SQL Injection, we append an apostrophe to t
 
 If executing this link returns an error message like "You have an error in your SQL syntax", the site is most likely vulnerable. However, even if the page loads normally, that does not necessarily mean the site is secure, so we will continue testing further. To exploit this type of vulnerability (GET parameter SQL Injection), we will use a special tool called sqlmap. Sqlmap is one of the most powerful and widely used hacking tools, specifically focused on SQL Injection. </p><br>
 
-<b>Installing sqlmap </b><br>
+<b>Installing sqlmap</b><br>
 
-<p>In your Linux terminal, if you haven't already, update your system using the following command: "sudo apt update && sudo apt upgrade". Then, install sqlmap by running: "sudo apt install sqlmap". Once the installation is complete, type "sqlmap" in the terminal. If the application's welcome screen appears, displaying its logo and usage instructions, it means everything was installed successfully.
+<p>In your Linux terminal, if you haven't already, update your system using the following command: "sudo apt update && sudo apt upgrade". Then, install sqlmap by running: "sudo apt install sqlmap". Once the installation is complete, type "sqlmap" in the terminal. If the application's welcome screen appears, displaying its logo and usage instructions, it means everything was installed successfully. </p><br>
+
+<b>Using sqlmap </b><br>
+
+<p>Sqlmap is used with the following structure: "sqlmap <i>link_with_parameter</i>"
+
+So, in our case, the command will be:<br>
+
+<div class="code-box2">sqlmap https://mywebsite.com/documents.php?id=1 -dbs</div>
+
 
 
 
