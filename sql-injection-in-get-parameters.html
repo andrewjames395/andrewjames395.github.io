@@ -115,6 +115,7 @@ a {
     display: block; /* Face ca elementul să ocupe întreaga lățime */
     white-space: pre-wrap; /* Menține formatul codului și permite textului să se împartă pe mai multe linii */
     max-width: 100%; /* Se asigură că nu depășește lățimea containerului */
+    font-size: inherit;
 }
 
 .code-box2 {
@@ -201,7 +202,7 @@ These types of links contain GET parameters. For a better understanding, let's a
 
 A link with a GET parameter is characterized by a "?", followed by the GET parameter (in our case, "id"), an "=" sign, and a value (in this case, 1). Essentially, links with GET parameters send a request to the database to retrieve and display stored content on the page. In our example, the corresponding SQL query would look something like this:<br><br>
 
-<div class= "code-box">SELECT * FROM documents WHERE id = 1;</div>
+<div class="code-box">SELECT * FROM documents WHERE id = 1;</div>
 <br><br>
 
 To test if our page is vulnerable to SQL Injection, we append an apostrophe to the end of the link:<br><br>
