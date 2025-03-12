@@ -200,9 +200,10 @@ https://myphotos.uk/photos.php?year=2018&month=may</div>
 These types of URLs contain GET parameters. For a better understanding, let's analyze the first link:<br><br>
 
 <div class="code-box">https://mywebsite.com/documents.php?id=1</div>
-<br><br>
 
-A link with a GET parameter is characterized by a "?", followed by the GET parameter (in our case, "id"), the equal sign, and the value (in this case, 1). Practically speaking, links with GET parameters send a request to the database to retrieve and display stored content on the page. In our example, the corresponding SQL query would look something like this:<br><br>
+<br>
+
+A link with a GET parameter is characterized by a question mark, followed by the GET parameter (in our case, id), an equal sign, and the value (in this case, 1). Practically speaking, links with GET parameters send a request to the database to retrieve and display stored content on the page. In our example, the corresponding SQL query would look something like this:<br><br>
 
 <div class="code-box">SELECT * FROM documents WHERE id = 1</div>
 <br><br>
