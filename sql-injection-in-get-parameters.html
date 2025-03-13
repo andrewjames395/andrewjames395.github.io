@@ -232,7 +232,21 @@ So, in our case, the command will be:<br><br>
 
 <div class="code-box2"><span class="username">andrew@local:~$</span> sqlmap https://mywebsite.com/documents.php?id=1 -dbs</div><br><br>
 
-We added the -dbs option so that the program not only tests for vulnerabilities but also displays, in case the site is vulnerable to SQL Injection, the names of the databases. Once this command is entered, sqlmap will begin testing different combinations (payloads). If it discovers that the site is vulnerable, it will inform us of this.
+We added the -dbs option so that the program not only tests for vulnerabilities but also displays, in case the site is vulnerable to SQL Injection, the names of the databases. Once this command is entered, sqlmap will begin testing different combinations (payloads). If it discovers that the site is vulnerable, it will inform us of this.<br><br>
+
+...<br><br>
+
+In the end, it will display the names of the databases, showing them with a [*] in front.<br><br>
+
+...<br><br>
+
+Databases such as information_schema, performance_schema, and mysql are default system databases. The main database usually has a name similar to that of the website, so in our case the good one is "mywebsite_db". Now that we have the database name, we need to extract the table names from it. To do this, we will enter the database name using the -D attribute and use the -tables option.<br><br>
+
+<div class="code-box2"><span class="username">andrew@local:~$</span> sqlmap https://mywebsite.com/documents.php?id=1 -D mywebsite_db -tables</div><br><br>
+
+
+After running this command, we will receive an output similar to:
+
 
 
 
