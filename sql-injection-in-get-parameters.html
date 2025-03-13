@@ -241,15 +241,7 @@ We added the -dbs option so that the program not only tests for vulnerabilities 
 [11:08:02] [INFO] testing 'AND boolean-based blind - WHERE or HAVING clause'
 [11:08:05] [INFO] testing 'Boolean-based blind - Parameter replace (original value)'
 [11:08:05] [INFO] testing 'MySQL >= 5.1 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (EXTRACTVALUE)'
-[11:08:07] [INFO] testing 'PostgreSQL AND error-based - WHERE or HAVING clause'
-[11:08:08] [INFO] testing 'Microsoft SQL Server/Sybase AND error-based - WHERE or HAVING clause (IN)'
-[11:08:09] [INFO] testing 'Oracle AND error-based - WHERE or HAVING clause (XMLType)'
-[11:08:11] [INFO] testing 'Generic inline queries'
-[11:08:11] [INFO] testing 'PostgreSQL > 8.1 stacked queries (comment)'
-[11:08:12] [INFO] testing 'Microsoft SQL Server/Sybase stacked queries (comment)'
-[11:08:13] [INFO] testing 'Oracle stacked queries (DBMS_PIPE.RECEIVE_MESSAGE - comment)'
-[11:08:14] [INFO] testing 'MySQL >= 5.0.12 AND time-based blind (query SLEEP)'
-[11:08:15][INFO] GET parameter 'id' appears to be 'MySQL >= 5.0.12 AND time-based blind (query SLEEP)' injectable
+[11:08:15] [INFO] GET parameter 'id' appears to be 'MySQL >= 5.1 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (EXTRACTVALUE)' injectable
 it looks like the back-end DBMS is 'MySQL'. Do you want to skip test payloads specific for other DBMSes? [Y/n]</div><br>
 
 In the end, it will display the names of the databases, showing them with a [*] in front.<br><br>
