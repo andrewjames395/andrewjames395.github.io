@@ -281,7 +281,11 @@ We use the -dbs option to retrieve the database names. Once we have these names,
 
 <div class="code-box2"><span class="username">andrew@local:~$</span> sqlmap <i>link</i> -D <i>dbname</i> -tables</div><br><br>
 
-After obtaining both the database and table names, we use the -D and -T options together and extract the content with -dump.
+After obtaining both the database and table names, we use the -D and -T options together and extract the content with -dump.<br><br>
+
+
+<div class="code-box2"><span class="username">andrew@local:~$</span> sqlmap <i>link</i> -D <i>dbname</i> -T <i>tblname</i> -dump</div><br><br>
+
 
 It is important to note that just because a link follows the format we discussed in this article, it does not automatically mean it is vulnerable to SQL Injection. It simply indicates that it queries a database.
 
