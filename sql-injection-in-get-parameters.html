@@ -259,6 +259,19 @@ Now we have the content of the users table. If we want, we can go further and ex
 
 <div class="code-box2"><span class="username">andrew@local:~$</span> sqlmap https://mywebsite.com/documents.php?id=1 -D mywebsite_db -T users -C username,password,country -dump</div><br><br>
 
+This is, in general, the database content extraction with sqlmap. However,with this tool, we can do much more. We can scan a specific website to find links with GET parameters, using the --crawl=2 option. This way, sqlmap will search for all links with GET parameters on that website and test them.<br><br>
+
+
+<div class="code-box2"><span class="username">andrew@local:~$</span> sqlmap https://mywebsite.com/ --crawl=2</div><br><br>
+
+It will also ask you if you want to save, in a temporary file, the links for a further testing. In this case, if you want this, you can test the links from a file with -m option:
+
+<div class="code-box2"><span class="username">andrew@local:~$</span> sqlmap -m links.txt</div><br><br>
+
+Also, with sqlmap, we can not only extract tables content but also execute database commands, if the website is vulnerable to SQL Injection. To do this, we use the --sql-shell option. Thus, we can now execute SQL commands without worrying about the correct syntax, which varies depending on how the query is structured, as sqlmap will handle this automatically. We can add new users, modify existing user data, or run any other SQL command we want, depending on the database permissions. At this point, a basic understanding of SQL would be necessary.
+
+<div class="code-box2"><span class="username">andrew@local:~$</span> sqlmap https://mywebsite.com/documents.php?id=1 --sql-shell
+sql-shell>SELECT * FROM users WHERE id=1</div><br><br>
 
 
 
