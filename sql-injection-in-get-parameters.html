@@ -287,7 +287,22 @@ After obtaining both the database and table names, we use the -D and -T options 
 <div class="code-box2"><span class="username">andrew@local:~$</span> sqlmap <i>link</i> -D <i>dbname</i> -T <i>tblname</i> -dump</div><br><br>
 
 
-It is important to note that just because a link follows the format we discussed in this article, it does not automatically mean it is vulnerable to SQL Injection. It simply indicates that it queries a database.
+It is important to note that just because a link follows the format we discussed in this article, it does not automatically mean it is vulnerable to SQL Injection. It simply indicates that it queries a database. </p><br>
+
+<b>Can this vulnerability be exploited directly from the link, without sqlmap?</b><br>
+
+<p>Yes, but it is more complicated and requires a fairly good understanding of the SQL language. With sqlmap, we automate the testing process and make it much simpler.</p><br>
+
+
+<b>Where can I practice this attack legally?</b><br>
+
+Besides major platforms like Hack The Box, Hack This Site, or Parrot CTF, there are certain websites where this vulnerability can be legally exploited. <br><br>
+
+One of them is http://testphp.vulnweb.com/, a site created by the cybersecurity platform Acunetix, which is intentionally designed with multiple vulnerabilities. By exploring the site, you will find several links with GET parameters, some of which are vulnerable to SQL Injection.<br><br>
+
+Additionally, the first level of TigerLab contains such a vulnerability. You need to find the link with a GET parameter, as that one is vulnerable to SQL Injection.
+
+
 
 
 
