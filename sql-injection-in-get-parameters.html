@@ -304,11 +304,15 @@ sql-shell> UPDATE users SET password = 'newpassword123' WHERE id = 1; --this com
 
 <p>Sqlmap is used with the structure: sqlmap <i>link_with_parameter</i>. However, if our link has multiple parameters, the command should be structured like this: sqlmap --url="<i>link_with_parameter"</i>. <br><br>
 
-We use the -dbs option to retrieve the database names. Once we have these names, we specify the database name with the -D option, followed by -tables to list the tables. 
+We use the -dbs option to retrieve the database names.<br>
+
+<div class="code-box2"><span class="username">andrew@local:~$</span> sqlmap <i>link</i> -dbs</div><br><br>
+
+Once we have its name, we specify the database name with the -D option, followed by -tables to list the tables. 
 
 <div class="code-box2"><span class="username">andrew@local:~$</span> sqlmap <i>link</i> -D <i>dbname</i> -tables</div><br><br>
 
-After obtaining both the database and table names, we use the -D and -T options together and extract the content with -dump.<br><br>
+After obtaining both the database and table names, we specify the database name with -D atribute and the table name with -T , and then we extract the content with -dump option.<br><br>
 
 
 <div class="code-box2"><span class="username">andrew@local:~$</span> sqlmap <i>link</i> -D <i>dbname</i> -T <i>tblname</i> -dump</div><br><br>
@@ -333,7 +337,7 @@ Additionally, the first level of <a href="http://redtiger.labs.overthewire.org/l
 
 <a href="https://youtu.be/18I7H_57mlM?si=aX1ytVz5I4xTLhgw"><span class="blue-link">SQL Injection exploitation on testphp.vulnweb.com - Youtube tutorial</span></a>
 <br><br>
-<a href=https://youtu.be/18I7H_57mlM?si=aX1ytVz5I4xTLhgw"><span class="blue-link">Is SQL Injection still a thing in 2024 - Video article by aikido.dev</span></a>
+<a href="https://www.aikido.dev/blog/the-state-of-sql-injections"><span class="blue-link">Is SQL Injection still a thing in 2024 - Video article by aikido.dev</span></a>
 
 
 
