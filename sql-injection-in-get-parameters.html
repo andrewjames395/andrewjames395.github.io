@@ -271,7 +271,20 @@ It will also ask you if you want to save, in a temporary file, the links for a f
 Also, with sqlmap, we can not only extract tables content but also execute database commands, if the website is vulnerable to SQL Injection. To do this, we use the --sql-shell option. Thus, we can now execute SQL commands without worrying about the correct syntax, which varies depending on how the query is structured, as sqlmap will handle this automatically. We can add new users, modify existing user data, or run any other SQL command we want, depending on the database permissions. At this point, a basic understanding of SQL would be necessary.<br>
 
 <div class="code-box2"><span class="username">andrew@local:~$</span> sqlmap https://mywebsite.com/documents.php?id=1 --sql-shell
-sql-shell> UPDATE users SET password = 'newpassword123' WHERE id = 1; --this command will modify the password of the first user in the table</div><br><br>
+sql-shell> UPDATE users SET password = 'newpassword123' WHERE id = 1; --this command will modify the password of the first user in the table</div><br><br></p>
+
+<b>Recap</b><br>
+
+Sqlmap is used with the structure: sqlmap <i>link_with_parameter</i>. However, if our link has multiple parameters, the command should be structured like this: sqlmap --url="<i>link_with_parameter"</i>. <br><br>
+
+We use the -dbs option to retrieve the database names. Once we have these names, we specify the database name with the -D option, followed by -tables to list the tables. 
+
+<div class="code-box2"><span class="username">andrew@local:~$</span> sqlmap <i>link</i> -D <i>dbname</i> -tables</div><br><br>
+
+After obtaining both the database and table names, we use the -D and -T options together and extract the content with -dump.
+
+It is important to note that just because a link follows the format we discussed in this article, it does not automatically mean it is vulnerable to SQL Injection. It simply indicates that it queries a database.
+
 
 
 
