@@ -235,7 +235,7 @@ Sqlmap is used with the following structure: "sqlmap <i>link_with_parameter</i>"
 
 So, in our case, the command will be:<br><br>
 
-<div class="code-box2"><span class="username">andrew@local:~$</span> sqlmap https://mywebsite.com/documents.php?id=1 -dbs</div><br><br>
+<div class="code-box2"><span class="username">andrew@local:~$</span> sqlmap https://mywebsite.com/documents.php?id=1 -dbs</div><br>
 
 We added the -dbs option so that the program not only tests for vulnerabilities but also displays, in case the site is vulnerable to SQL Injection, the names of the databases. Once this command is entered, sqlmap will begin testing different combinations (payloads). If it discovers that the site is vulnerable, it will inform us of this.<br><br>
 
@@ -331,7 +331,7 @@ We use the -dbs option to retrieve the database names.<br>
 
 <div class="code-box2"><span class="username">andrew@local:~$</span> sqlmap <i>link</i> -dbs</div><br>
 
-Once we have its name, we specify the database name with the -D option, followed by -tables to list the tables.<br>
+Once we have its name, we specify the database name with the -D option, followed by -tables to list the tables.<br><br>
 
 <div class="code-box2"><span class="username">andrew@local:~$</span> sqlmap <i>link</i> -D <i>dbname</i> -tables</div><br>
 
@@ -355,6 +355,12 @@ It is important to note that just because a link follows the format we discussed
 One of them is <a href="http://testphp.vulnweb.com/"><span class="blue-link">testphp.vulnweb.com</span></a>, a site created by the cybersecurity platform Acunetix, which is intentionally designed with multiple vulnerabilities. By exploring the site, you will find several links with GET parameters, some of which are vulnerable to SQL Injection.<br><br>
 
 Additionally, the first level of <a href="http://redtiger.labs.overthewire.org/level1.php"><span class ="blue-link">RedTigerLabs</span></a> contains such a vulnerability. You need to find the link with a GET parameter, as that one is vulnerable to SQL Injection.</p><br>
+
+<b>How common is the GET parameter SQL injection vulnerability today?</b><br>
+
+<p>Despite efforts to mitigate this type of vulnerability, SQL injection (in all its forms) remains one of the most prevalent security threats today. Research conducted by Aikido.dev showed that in 2024, 6.7% of all vulnerabilities in open-source projects and 10% in closed-source projects were SQLi. Additionally, a 2023 report revealed that 23% of the major identified vulnerabilities were of this type. These statistics highlight the importance of implementing proper security measures.</p>
+
+
 
 <b>Related article</b><br>
 
