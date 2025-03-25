@@ -119,6 +119,12 @@ a {
     max-width: 100%; /* Se asigură că nu depășește lățimea containerului */
 }
 
+.ad {
+
+max-width: 100%;
+display: block; /* Face ca elementul să ocupe întreaga lățime */
+}
+
 .code-box2 {
     background-color: #f4f4f4; /* Fundal gri deschis */
     border: 1px solid #ddd; /* Bordură subțire gri */
@@ -168,7 +174,7 @@ a {
 
 The first technique we will talk about is called SQL Injection. By exploiting this type of vulnerability, an attacker can gain unauthorized access to a website's database and can execute commands that interact with the database. In this multi-part lesson, you will learn what SQL Injection is, how to legally exploit this vulnerability, and how to protect yourself against this type of attack.</p><br>
 
-<div>
+<div class="ad">
     <script type="text/javascript">
         aclib.runBanner({
             zoneId: '9737286',
@@ -233,7 +239,7 @@ In the case of a login form, what the server sees is the following SQL query:<br
 
 The explanation of the query in human language is: Select all from the "users" table where the value of the "username" column is <span style="white-space: nowrap;">' '</span> and the value of the "password" column is <span style="white-space: nowrap;">' '</span>.<br><br>
 
-<div>
+<div class="ad">
     <script type="text/javascript">
         aclib.runBanner({
             zoneId: '9737286',
@@ -258,7 +264,7 @@ If we enter incorrect credentials, such as "mary:123456", the query will look li
 
 Since this combination does not exist in the database, the interrogation will return the FALSE value, and we will not be able to log in.<br><br>
 
-<div>
+<div class="ad">
     <script type="text/javascript">
         aclib.runBanner({
             zoneId: '9737286',
