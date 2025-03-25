@@ -265,13 +265,14 @@ If we enter incorrect credentials, such as "mary:123456", the query will look li
 
 Since this combination does not exist in the database, the interrogation will return the FALSE value, and we will not be able to log in.<br><br>
 
-<div class="ad">
+<div>
     <script type="text/javascript">
         aclib.runBanner({
-            zoneId: '9737286',
+            zoneId: '9737366',
         });
     </script>
 </div><br>
+
 
 
 SQL Injection is based on the modification of the input fields, to manipulate the TRUE or FALSE values from the database interogation. As we saw earlier, for a successful login, the query must return the TRUE value. But what if, instead of entering the correct credentials (which we may not know), we close the username/password field (whose name the server search for in the database), and open another field where we enter a correct mathematical relation or another type of equality, making the server to choose the second value. Thus, our input will looks like this:<br><br>
@@ -288,10 +289,11 @@ Thus, the server checks whether the user "mary" exists or if 1=1. Since 1=1 is a
 <div>
     <script type="text/javascript">
         aclib.runBanner({
-            zoneId: '9737286',
+            zoneId: '9737366',
         });
     </script>
 </div><br>
+
 
 
 There are several methods to exploit this vulnerability. In SQL, to mark a line of code that should be ignored by the programming language when executing the query (like a comment in human language created by the programmer that should not be considered by the program), we use -- (two minuses). Thus, everything that follows on that line after -- will be ignored by SQL (similar to the # in Python or PHP). The user can enter the following input:<br><br>
@@ -316,10 +318,11 @@ Will produce the following SQL interrogation:<br><br>
 <div>
     <script type="text/javascript">
         aclib.runBanner({
-            zoneId: '9737286',
+            zoneId: '9737366',
         });
     </script>
 </div><br>
+
 
 
 Practically speaking, it this case, the server only verify if the username is ok, then it let you in. Depending on how the interrogation is created, many times we have to use # instead of --, but we will discuss this in another article. Also, we can connect to a specific account based on its ID in the database. In general, the column containing the user ID is named "id". This column is automatically created by the database. Essentially, it represents the user's number in the order in which the account was created (the first user will be assigned ID 1, the second one ID 2, and so on). <br><br>
@@ -348,7 +351,7 @@ It is also very important that, when legally exploiting an SQLi vulnerability, o
 <div>
     <script type="text/javascript">
         aclib.runBanner({
-            zoneId: '9737286',
+            zoneId: '9737366',
         });
     </script>
 </div><br>
@@ -384,10 +387,11 @@ In the next article, we will discuss a much more common vulnerability today: SQL
 <div>
     <script type="text/javascript">
         aclib.runBanner({
-            zoneId: '9737286',
+            zoneId: '9737366',
         });
     </script>
 </div><br>
+
 
 
 <b>Related articles</b><br>
