@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<script id="aclib" type="text/javascript" src="//acscdn.com/script/aclib.js"></script>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
@@ -174,15 +172,6 @@ display: block; /* Face ca elementul să ocupe întreaga lățime */
 
 The first technique we will talk about is called SQL Injection. By exploiting this type of vulnerability, an attacker can gain unauthorized access to a website's database and can execute commands that interact with the database. In this multi-part lesson, you will learn what SQL Injection is, how to legally exploit this vulnerability, and how to protect yourself against this type of attack.</p><br>
 
-<div>
-    <script type="text/javascript">
-        aclib.runBanner({
-            zoneId: '9737366',
-        });
-    </script>
-</div>
-
-
 <b>How does SQL Injection works</b><br>
 
 <p>First of all, we need to understand that website databases are created using a programming language called SQL (Structured Query Language). As you probably already know, each programming language has its specific usage: HTML is used for creating websites, CSS for styling the content, JavaScript for creating scripts, PHP for the connection between websites and servers etc. Therefore, SQL is used for creating databases and managing the connection between a website and its database.<br><br>
@@ -239,16 +228,6 @@ In the case of a login form, what the server sees is the following SQL query:<br
 
 The explanation of the query in human language is: Select all from the "users" table where the value of the "username" column is <span style="white-space: nowrap;">' '</span> and the value of the "password" column is <span style="white-space: nowrap;">' '</span>.<br><br>
 
-<div>
-    <script type="text/javascript">
-        aclib.runBanner({
-            zoneId: '9737366',
-        });
-    </script>
-</div><br>
-
-
-
 Now, let's enter a valid set of credentials: <br><br>
 <div class="code-box2">Username: john_doe
 Password: password123</div><br>
@@ -265,15 +244,6 @@ If we enter incorrect credentials, such as "mary:123456", the query will look li
 
 Since this combination does not exist in the database, the interrogation will return the FALSE value, and we will not be able to log in.<br><br>
 
-<div>
-    <script type="text/javascript">
-        aclib.runBanner({
-            zoneId: '9737366',
-        });
-    </script>
-</div><br>
-
-
 
 SQL Injection is based on the modification of the input fields, to manipulate the TRUE or FALSE values from the database interogation. As we saw earlier, for a successful login, the query must return the TRUE value. But what if, instead of entering the correct credentials (which we may not know), we close the username/password field (whose name the server search for in the database), and open another field where we enter a correct mathematical relation or another type of equality, making the server to choose the second value. Thus, our input will looks like this:<br><br>
 
@@ -285,16 +255,6 @@ Now, the interrogation becomes:<br><br>
 <div class="code-box">SELECT * FROM users WHERE username = 'mary' OR '1'='1' AND password = '123456' OR '1'='1'</div><br>
 
 Thus, the server checks whether the user "mary" exists or if 1=1. Since 1=1 is always TRUE, the result of the query for the username field will be TRUE. The same applies to the password field, where the server checks whether the password is "123456" or if 1=1. Since the query result is TRUE, we will be able to log into the website. With such an input, the login will be performed in the account of the the first user in the database (usually the administrator).<br><br>
-
-<div>
-    <script type="text/javascript">
-        aclib.runBanner({
-            zoneId: '9737366',
-        });
-    </script>
-</div><br>
-
-
 
 There are several methods to exploit this vulnerability. In SQL, to mark a line of code that should be ignored by the programming language when executing the query (like a comment in human language created by the programmer that should not be considered by the program), we use -- (two minuses). Thus, everything that follows on that line after -- will be ignored by SQL (similar to the # in Python or PHP). The user can enter the following input:<br><br>
 
@@ -314,16 +274,6 @@ Password: doesntmatter</div><br>
 Will produce the following SQL interrogation:<br><br>
 
 <div class="code-box">SELECT * FROM users WHERE username = 'john_doe' <span style="color: gray;">--' AND password = 'doesntmatter'</span></div><br>
-
-<div>
-    <script type="text/javascript">
-        aclib.runBanner({
-            zoneId: '9737366',
-        });
-    </script>
-</div><br>
-
-
 
 Practically speaking, it this case, the server only verify if the username is ok, then it let you in. Depending on how the interrogation is created, many times we have to use # instead of --, but we will discuss this in another article. Also, we can connect to a specific account based on its ID in the database. In general, the column containing the user ID is named "id". This column is automatically created by the database. Essentially, it represents the user's number in the order in which the account was created (the first user will be assigned ID 1, the second one ID 2, and so on). <br><br>
 
@@ -348,14 +298,6 @@ There are countless combinations like this that we can use. Moreover, in the cas
 
 It is also very important that, when legally exploiting an SQLi vulnerability, our input to be syntactically correct (e.g., avoiding misplaced apostrophes or incorrect syntax), to ensure a successful connection.</p><br>
 
-<div>
-    <script type="text/javascript">
-        aclib.runBanner({
-            zoneId: '9737366',
-        });
-    </script>
-</div><br>
-
 
 <b>How do I test for SQL Injection</b><br>
 
@@ -369,29 +311,12 @@ Another is <a href="https://juice-shop.herokuapp.com/#/"><span class="blue-link"
 
 There are also some labs on in-login-fields SQL Injection on <a href ="https://portswigger.net/web-security/sql-injection/lab-login-bypass"><span class="blue-link">portswigger.com</span></a>. This, being a big cybersecurity website, you will need a account to access the labs.</p><br>
 
-<div>
-    <script type="text/javascript">
-        aclib.runBanner({
-            zoneId: '9737286',
-        });
-    </script>
-</div><br>
-
-
 
 <b>How common is the SQLi vulnerability in login fields today?</b><br>
 
 <p>Even if SQL injection is one of the most common vulnerability, however, in the current year, this type of SQLi (in login field injection) is very difficult to find. It may still be encountered on older websites that have not been maintained or maybe on websites from less developed countries, but human error can occur anywhere.<br><br>
 
 In the next article, we will discuss a much more common vulnerability today: SQL Injection in URLs. We will also use special tools to legally extract the content of its tables.</p><br>
-<div>
-    <script type="text/javascript">
-        aclib.runBanner({
-            zoneId: '9737366',
-        });
-    </script>
-</div><br>
-
 
 
 <b>Related articles</b><br>
